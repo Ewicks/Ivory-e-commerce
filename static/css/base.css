@@ -10,9 +10,8 @@ body {
     font-size: 20px;
 }
 
-a {
-    text-decoration: none;
-    text-decoration-line: none;
+.tm-symbol {
+    font-size: 20px;
 }
 
 
