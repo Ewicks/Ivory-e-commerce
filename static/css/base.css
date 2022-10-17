@@ -3,13 +3,54 @@ html {
 }
 
 body {
-    background: white;
+    /* background: rgb(249, 245, 245); */
+    background-color: rgb(236, 150, 51);
     color: black;
+    height: calc(100vh - 148px);
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+
+.text-gray {
+    color: gray !important;
+}
+
+.vertical {
+    border-left: 2px solid gray;
+    height: 200px;
+    position:absolute;
+    left: 33%;
+    height: calc(100vh - 210px);
+    
+    /* bottom: 50%; */
+  }
+
+.nav-columns {
+    width: 100%;
+    height: 30%;
+}
+
+.image-overlay {
+    background: url('/media/image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 248px);
+    width: 100%;
+    margin: 30px;
+
 }
 
 .home-title {
-    color: rgb(236, 150, 51);
-    font-size: 70px;
+    color: white !important;
+    font-size: 140px;
+}
+
+a {
+    color:rgb(236, 150, 51)
 }
 
 .bg-topnav{
