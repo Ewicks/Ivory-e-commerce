@@ -64,10 +64,12 @@ a {
     overflow: hidden;
 }
 
-/* a {
-    color: black;
-} */
+/* Products Page */
 
+.products-border {
+    border: 2px solid black;
+    
+}
 
 
 /* from Bulma */
