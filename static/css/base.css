@@ -71,6 +71,21 @@ a {
     
 }
 
+.img-height {
+    height: 300px;
+    width: 100%;
+
+}
+.img-height-detail {
+    height: 500px;
+    width: 600px;
+}
+
+.img-container {
+    height: 300px;
+    width: 300px
+}
+
 
 /* from Bulma */
 .icon {
