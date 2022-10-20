@@ -1,4 +1,4 @@
-<div id="topnav" class="row pt-lg-2 d-none d-lg-flex mx-auto bg-topnav">
+<div id="topnav" class="row pt-lg-2 d-none d-lg-flex mx-auto topnav bg-topnav">
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center d-flex">
@@ -9,11 +9,11 @@
     </div>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <a href="{% url 'home' %}" class="nav-link title-color">
-            <h2 class="logo-font my-0 home-title text-center d-flex">IVORY <span class="tm-symbol">&trade;</span></h2>
+            <h2 class="logo-font  home-title text-center ">IVORY <span class="tm-symbol">&trade;</span></h2>
         </a>
     </div>
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-flex">
-        <form method="GET" action="{% url 'products' %}" class="my-auto">
+    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 d-flex justify-content-center">
+        <!-- <form method="GET" action="{% url 'products' %}" class="my-auto">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="value" placeholder="Search our site">
                 <div class="input-group-append">
@@ -24,8 +24,15 @@
                     </button>
                 </div>
             </div>
+        </form> -->
+        <form id="app" action="#" class="d-flex">
+            <label :data-state="state" for="search">
+                <input type="text" placeholder="Search" @click="state = 'opan'" @blur="state='close'" />
+                <i class="fa fa-search" @click="" aria-hidden="true"></i>
+            </label>
         </form>
-        <ul class="list-inline list-unstyled text-center text-lg-right">
+                                                                                
+        <ul class="list-inline list-unstyled text-center d-flex">
             <li class="list-inline-item dropdown">
                 
                 <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -71,3 +78,10 @@
         <h4 class="logo-font text-blackmy-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
     </div>            
 </div>
+
+<script type="text/javascript">
+   var app = new Vue({
+  el: '#app',
+  data: { state: "close" } 
+});
+</script>
