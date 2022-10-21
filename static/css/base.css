@@ -37,14 +37,6 @@ body {
     height: 30%;
 }
 
-.image-overlay {
-    background: url('/media/image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 248px);
-    width: 100%;
-    margin: 30px;
-
-}
 
 .home-title {
     color: white !important;
@@ -112,6 +104,24 @@ a.category-badge > span.badge:hover {
 .btt-link {
     cursor: pointer;
 }
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 130px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 
 /* from Bulma */
 .icon {
