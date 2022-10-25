@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-t%%lnbp3tn!s)b0rxa7=rmlsopr+thubqe1p+66vay9-n2!jt*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ivory/herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -118,13 +119,18 @@ WSGI_APPLICATION = 'ivory.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
+if "DATABASE_URL" in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('postgres://mjeamextxrjwbw:0f96c3c1be769afb32490ccefe1d8b2622f23da37a52ef00501664407fea188d@ec2-54-76-43-89.eu-west-1.compute.amazonaws.com:5432/degiokrpbj3e52')
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
