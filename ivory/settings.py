@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-t%%lnbp3tn!s)b0rxa7=rmlsopr+thubqe1p+66vay9-n2!jt*'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['ivory/herokuapp.com', 'localhost']
 
@@ -122,7 +122,7 @@ WSGI_APPLICATION = 'ivory.wsgi.application'
 
 if "DATABASE_URL" in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://mjeamextxrjwbw:0f96c3c1be769afb32490ccefe1d8b2622f23da37a52ef00501664407fea188d@ec2-54-76-43-89.eu-west-1.compute.amazonaws.com:5432/degiokrpbj3e52')
+        'default': dj_database_url.parse('DATABASE_URL')
     }
 else:
     DATABASES = {
@@ -131,6 +131,10 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://mjeamextxrjwbw:0f96c3c1be769afb32490ccefe1d8b2622f23da37a52ef00501664407fea188d@ec2-54-76-43-89.eu-west-1.compute.amazonaws.com:5432/degiokrpbj3e52')
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
