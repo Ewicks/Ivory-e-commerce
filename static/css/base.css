@@ -8,6 +8,30 @@ body {
     height: calc(100vh - 148px);
     font-size: 20px;
 }
+.bold {
+    font-weight: 600 !important;
+}
+
+.position {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+}
+
+a {
+    color: black !important;
+}
+
+.dropdown-menu {
+    top: 70%;
+    left: 60px;
+}
+
+.image-overlay {
+    background-image: url('/media/pexels-maria-loznevaya-13816113.jpg');
+    height: 100%;
+    width: 100%;
+}
 
 .menu-border {
     border: 2.5px black solid;

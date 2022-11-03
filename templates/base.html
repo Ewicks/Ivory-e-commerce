@@ -44,13 +44,8 @@
   <body>
     <header>
       {% include 'includes/header.html' %}
-      <!-- {% include 'includes/main-nav.html' %} -->
     </header>
-
-
-
-
-
+    
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -68,14 +63,61 @@
             {% endfor %}
         </div>
     {% endif %}
+    
 
     {% block page_header %}
       
     {% endblock %}
 
     {% block content %}
-      
+       
     {% endblock %}
+    <!-- <footer>
+      <div class="bg-topnav topnav">
+        <div class="row">
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <h1>menu</h1>
+            <h2><a href="">Home</a></h2>
+            <h2><a href="">Latest Drop</a></h2>
+            <h2><a href="">All Products</a></h2>
+            <h2><a href="">Contact</a></h2>
+          </div>
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <h1 class="my-auto">Socials</h1>
+            <a class="my-auto" href="">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-snapchat"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <footer class="footer my-auto py-3 topnav bg-topnav">
+      <div class="row bg-topnav">
+          <div class="col-6 d-flex align-items-center justify-content-center">
+              <div class="position">
+                  <h3 class="heading bold">Links</h3>
+                  <a class="r-hover" href="">About</a>
+                  <a class="r-hover" href="">Blog</a>
+                  <a class="r-hover" href="">Contact</a>
+              </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+              <div class="position">
+                  <h3 class="heading bold">Find Me</h3>
+                  <a href="https://www.linkedin.com/in/ethan-wicks-635b40227/" target="_blank"><i
+                          class="fa-brands fa-linkedin fa-lg p-3 r-hover"></i></a>
+                  <a href="https://github.com/Ewicks" target="_blank"><i
+                          class="fa-brands fa-github p-3 r-hover fa-lg"></i></a>
+              </div>
+          </div>
+          
+      </div>
+  </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
