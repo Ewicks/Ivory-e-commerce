@@ -28,7 +28,7 @@ a {
 }
 
 .image-overlay {
-    background-image: url('/media/pexels-maria-loznevaya-13816113.jpg');
+    background: url('/media/pexels-maria-loznevaya-13816113.jpg')no-repeat fixed;
     height: 100%;
     width: 100%;
 }
