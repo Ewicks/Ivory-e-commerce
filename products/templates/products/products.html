@@ -102,14 +102,14 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-		$('.btt-link').click(function(e) {
+		£('.btt-link').click(function(e) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
 		})
 	</script>
     
     <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
+        £('#sort-selector').change(function() {
+            var selector = £(this);
             var currentUrl = new URL(window.location);
 
             var selectedVal = selector.val();
