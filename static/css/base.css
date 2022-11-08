@@ -11,6 +11,10 @@ body {
 .bold {
     font-weight: 600 !important;
 }
+/* 
+.h-60 {
+    height: 60vh; 
+} */
 
 .position {
     display: flex;
@@ -19,7 +23,7 @@ body {
 }
 
 a {
-    color: black !important;
+    color: black;
 }
 
 .dropdown-menu {
@@ -28,7 +32,7 @@ a {
 }
 
 .image-overlay {
-    background: url('/media/pexels-maria-loznevaya-13816113.jpg')no-repeat fixed;
+    background: url('/static/images/home-img.png')no-repeat fixed;
     height: 100%;
     width: 100%;
 }
@@ -360,6 +364,8 @@ label[data-state="close"] input {
     
 }
 
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -433,19 +439,19 @@ label[data-state="close"] input {
           z-index: 1030;
       }
   
-      .header-container {
+      /* .header-container {
           padding-top: 164px;
-      }
+      } */
   }
   
   /* pad the top a bit when navbar is collapsed on mobile */
   @media (max-width: 991px) {
-      .header-container {
+      /* .header-container {
           padding-top: 116px;
-      }
+      } */
   
-      body {
+      /* body {
           height: calc(100vh - 116px);
-      }
+      } */
   }
 
