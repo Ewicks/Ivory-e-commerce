@@ -23,7 +23,7 @@ body {
 }
 
 a {
-    color: black;
+    color: black !important;
 }
 
 .dropdown-menu {
@@ -32,7 +32,7 @@ a {
 }
 
 .image-overlay {
-    background: url('/static/images/home-img.png')no-repeat fixed;
+    background-image: url('/static/images/home-img.png') 50% 0 no-repeat fixed;
     height: 100%;
     width: 100%;
 }
@@ -99,9 +99,7 @@ select:invalid, select option[value=''] {
     width: 100%;
 }
 
-a {
-    color:rgb(236, 150, 51)
-}
+
 
 .bg-topnav{
     background-color: rgb(244, 222, 197);
