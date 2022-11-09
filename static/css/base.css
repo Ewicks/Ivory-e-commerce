@@ -296,7 +296,6 @@ label::after {
   display: block;
   height: 2px;
   width: 80%;
-  background-color: #F0AD4E;
   -webkit-transition: all 1s ease 0.5s;
   transition: all 1s ease 0.5s;
 }
