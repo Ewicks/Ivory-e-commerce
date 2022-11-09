@@ -22,6 +22,15 @@ body {
     line-height: 50px;
 }
 
+.r-hover {
+    text-decoration: none !important;
+}
+
+.r-hover:hover {
+    color: white !important;
+    text-decoration: none !important;
+}
+
 a {
     color: black !important;
 }
@@ -32,7 +41,6 @@ a {
 }
 
 .image-overlay {
-    background-image: url('/static/images/home-img.png') 50% 0 no-repeat fixed;
     height: 100%;
     width: 100%;
 }
