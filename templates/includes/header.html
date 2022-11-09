@@ -51,9 +51,9 @@
         <form id="app" action="{% url 'products' %}" method="GET" class="d-flex">
             <label :data-state="state" for="search" class="m-0">
                 
-                <input type="text" placeholder="Search" @click="state = 'opan'" @blur="state='close'" />
+                <input type="text" placeholder="Search" name="value" @click="state = 'opan'" @blur="state='close'" />
                 
-                <i class="fa fa-search" @click="" aria-hidden="true"></i>
+                <i type="submit" class="fa fa-search" @click="" aria-hidden="true"></i>
             </label>
         </form>
                                                                                 

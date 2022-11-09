@@ -3,12 +3,7 @@
 
 
 {% block content %}
-    <!-- Preloadder -->
-    <aside id="preloader">
-        <figure id="loader">
-            <img src="{% static 'images/home-img.png' %}" alt="Loader">
-        </figure>
-    </aside>
+   
     <div class="container-fluid h-100 bg-light">
         <div class="row h-100">
             <div class="col-4 text-center ">
@@ -41,20 +36,5 @@
     </div>
 {% endblock %}
 
-{% block postloadjs %}
-    {{ block.super }}
-       <!-- JS script -->
 
-       <script type="text/javascript">
-        /* jshint esversion: 11 */
-
-            document.addEventListener("DOMContentLoaded", function () {
-                // On page load, hide the preloader animation
-                document.getElementById("preloader").style.opacity = 0;
-                setTimeout(() => {
-                    document.getElementById("preloader").remove();
-                }, 5000);
-            });
-       </script>
-{% endblock %}
  
