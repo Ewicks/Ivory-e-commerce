@@ -27,12 +27,12 @@ body {
 }
 
 .r-hover:hover {
-    color: white !important;
+    color: gray !important;
     text-decoration: none !important;
 }
 
 a {
-    color: black !important;
+    color: black;
 }
 
 .dropdown-menu {
@@ -300,6 +300,7 @@ label::after {
   -webkit-transition: all 1s ease 0.5s;
   transition: all 1s ease 0.5s;
 }
+
 label input {
   -webkit-transition: width 1s ease, opacity 0.5s ease 0.5s;
   transition: width 1s ease, opacity 0.5s ease 0.5s;
@@ -308,8 +309,8 @@ label input {
   height: 25px;
   border: 0;
   outline: none;
-  color: #b06d0f;
 }
+
 label i {
   position: absolute;
   top: 11px;
