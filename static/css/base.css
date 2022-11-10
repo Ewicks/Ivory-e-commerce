@@ -15,10 +15,8 @@ body {
 .bold {
     font-weight: 600 !important;
 }
-/* 
-.h-60 {
-    height: 60vh; 
-} */
+
+
 
 .position {
     display: flex;
@@ -44,10 +42,10 @@ a {
     left: 60px;
 }
 
-.image-overlay {
+/* .image-overlay {
     height: 100%;
     width: 100%;
-}
+} */
 
 .menu-border {
     border: 2.5px black solid;
