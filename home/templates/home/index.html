@@ -4,35 +4,33 @@
 
 {% block content %}
    
-    <div class="container-fluid h-100 bg-light">
-        <div class="row h-100">
-            <div class="col-4 text-center ">
-                <div class="row nav-columns ">
-                    <div class="col my-auto">
-                        <h1 class="nav-link home-link text-gray">New Drops</h1>
-                    </div>
-                </div>
-                <div class="row nav-columns">
-                    <div class="col my-auto">
-                        <h1 class="text-gray">
-                            <a class="nav-link home-link text-gray" href="{% url 'products' %}">All Clothing</a>
-                        </h1>
-                    </div>
-                </div>
-                <div class="row nav-columns">
-                    <div class="col my-auto">
-                        <h1 class="nav-link home-link text-gray">Contact Us</h1>
-                    </div>
-                </div>
-            
-            </div>
-            <div class="col-8">
-                <div class="d-flex">
-                    <img src="{% static 'images/home-img.png' %}" height="600" width="100%">
+    <div class="row h-100">
+        <div class="col-4 text-center ">
+            <div class="row nav-columns ">
+                <div class="col my-auto">
+                    <h1 class="nav-link home-link text-gray">New Drops</h1>
                 </div>
             </div>
-            <div class="vertical"></div>
+            <div class="row nav-columns">
+                <div class="col my-auto">
+                    <h1 class="text-gray">
+                        <a class="nav-link home-link text-gray" href="{% url 'products' %}">All Clothing</a>
+                    </h1>
+                </div>
+            </div>
+            <div class="row nav-columns">
+                <div class="col my-auto">
+                    <h1 class="nav-link home-link text-gray">Contact Us</h1>
+                </div>
+            </div>
+        
         </div>
+        <div class="col-8">
+            <div class="d-flex">
+                <img src="{% static 'images/home-img.png' %}" height="635px" width="100%">
+            </div>
+        </div>
+        <div class="vertical"></div>
     </div>
 {% endblock %}
 
