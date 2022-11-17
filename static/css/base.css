@@ -33,7 +33,7 @@ body {
 }
 
 .ivory-size {
-    font-size: 90px;
+    font-size: 80px;
 }
 
 
@@ -456,6 +456,22 @@ label[data-state="close"] input {
   .allauth-form-inner-content a {
       color: #17a2b8; /* text-info */
   }
+
+  @media (min-width: 992px) {
+    /* .topnav {
+        height: 50px;
+    }
+
+    a {
+        font-size: 10px;
+    }
+
+    p {
+        font-size: 5px;
+    } */
+  }
+
+
   
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
