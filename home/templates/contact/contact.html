@@ -3,7 +3,7 @@
 
 {% block content %}
    
-    <div class="container h-100 bg-light">
+    <!-- <div class="container h-100 bg-light">
         <div class="row mx-auto">
             <div class="col">
                 <form method="POST">
@@ -15,7 +15,30 @@
                   </form>
             </div>
         </div>
+    </div> -->
+
+    <!-- Contact page -->
+<section class="light-bg">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container my-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body my-5 card-bg">
+                <form method="POST">
+                  <h2 class="text-uppercase text-center mb-3 red-c"><strong>Contact Us</strong></h2>
+                  <p class="mb-3 text-center red-c">Please fill in the details to contact us</p>
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input class="btn btn-red" type="submit" value="Submit">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
 
     

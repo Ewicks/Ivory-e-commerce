@@ -18,8 +18,9 @@ html {
     height: 2.5rem;            /* Footer height */
   }
 
-.container-fluid {
-    height: 60vh !important;
+#home-img-size {
+    height: 635px; 
+    width: 100%;
 }
 
 body {

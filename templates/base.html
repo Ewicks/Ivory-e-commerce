@@ -27,7 +27,7 @@
     {% endblock %}
 
     {% block corejs %}
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script> -->
     <script src="https://kit.fontawesome.com/b2fe83387a.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -69,17 +69,17 @@
     {% block page_header %}
       
     {% endblock %}
-
-    {% block content %}
-     <div class="page-container">
+    <div class="page-container">
         <div class="content-wrap">
-            
-        </div>
-     </div>
-       
-    {% endblock %}
+    {% block content %}
 
-    <footer class="footer my-auto pt-3">
+      
+    {% endblock %}   
+        </div>
+    </div>
+  
+
+    <footer class="footer container-fluid my-auto pt-3">
       <div class="row bg-topnav">
           <div class="col-6 d-flex align-items-center justify-content-center">
               <div class="position">
@@ -102,7 +102,7 @@
   </footer>
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
       $('.toast').toast('show');
     </script>
 

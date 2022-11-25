@@ -4,9 +4,9 @@
 
 {% block content %}
    
-    <div class="row h-100">
-        <div class="col-4 text-center ">
-            <div class="row nav-columns ">
+    <div class="row">
+        <div class="col-4 text-center">
+            <div class="row nav-columns">
                 <div class="col my-auto">
                     <h1 class="nav-link home-link text-gray">New Drops</h1>
                 </div>
@@ -20,14 +20,16 @@
             </div>
             <div class="row nav-columns">
                 <div class="col my-auto">
-                    <h1 class="nav-link home-link text-gray">Contact Us</h1>
+                    <h1 class="nav-link home-link text-gray">
+                        <a class="nav-link home-link text-gray" href="{% url 'contact' %}">Contact Us</a>
+                    </h1>
                 </div>
             </div>
         
         </div>
         <div class="col-8">
             <div class="d-flex">
-                <img src="{% static 'images/home-img.png' %}" height="635px" width="100%">
+                <img src="{% static 'images/home-img.png' %}" id="home-img-size" alt="home-page">
             </div>
         </div>
         <div class="vertical"></div>
