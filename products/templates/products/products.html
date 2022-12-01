@@ -42,7 +42,7 @@
     <div class="row products-border m-2">
         <div class="product-container pt-3 col-12">
             <div class="row">
-                {% for product in productss %}
+                {% for product in all_products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
                         <div class="card h-100 border-0">
                             {% if product.image %}
@@ -91,56 +91,39 @@
         </div>
     </div>
 </div>
-{{ productss }}<br>
-has_previous: {{ productss.has_previous }}<br>
-has_next: {{ productss.has_next }}<br>
-current page: {{ productss.number }}<br>
-number of pages: {{ productss.paginator.num_pages }}<br>
 
-{% if productss.has_previous %}
-<a href="?page=1">&laquo; first</a>
-<a class="text-black" href="?page={{ productss.previous_page_number }}">previous</a>
-{% endif %}
-<!-- {% if page_obj %}
+{% if all_products %}
 <p class="text-center">
-    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    Page {{ all_products.number }} of {{ all_products.paginator.num_pages }}
 </p>
 {% else %}
 <br>
 <br>
-{% endif %} -->
+{% endif %}
 
 <div class="d-flex justify-content-center">
     <ul style="margin-left: 10px;" class="pagination ">
-        {% if productss.has_previous %}
+        {% if all_products.has_previous %}
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black" href="?page=1">&laquo;
                 first</a></li>
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black"
-                href="?page={{ page_obj.previous_page_number }}">previous</a></li>
+                href="?page={{ all_products.previous_page_number }}">previous</a></li>
         {% endif %}
 
-        {% if productss.has_next %}
+        {% if all_products.has_next %}
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black align-items-center"
-                href="?page={{ page_obj.next_page_number }}">next page</a></li>
+                href="?page={{ all_products.next_page_number }}">next page</a></li>
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black"
-                href="?page={{ page_obj.paginator.num_pages }}">last page</a></li>
+                href="?page={{ all_products.paginator.num_pages }}">last page</a></li>
         {% endif %}
     </ul>
 </div>
-<div class="btt-button shadow-sm rounded-0 border border-black">
-    <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-    </a>	
-</div>
+
 
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-    <script>
-		$('.btt-link').click(function(e) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-		})
-	</script>
+  
     
     <script>
         $('#sort-selector').change(function() {

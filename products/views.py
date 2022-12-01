@@ -19,7 +19,7 @@ def all_products(request):
 
     p = Paginator(Product.objects.all(), 8)
     page = request.GET.get('page')
-    productss = p.get_page(page)
+    all_products = p.get_page(page)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -57,7 +57,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'productss': productss,
+        'all_products': all_products,
     }
 
     return render(request, 'products/products.html', context)
