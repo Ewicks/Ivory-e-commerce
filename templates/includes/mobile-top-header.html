@@ -1,52 +1,31 @@
 <ul>
-<li class="list-inline-item">
-   
-    <a href="{% url 'home' %}" class="nav-link title-color">
-        <h2 class="logo-font  home-title text-center ">IVORY <span class="tm-symbol">&trade;</span></h2>
-    </a>
-</li>
+    <li class="list-inline-item">
+    
+        <a href="{% url 'home' %}" class="nav-link title-color">
+            <h2 class="logo-font  home-title text-center my-auto">IVORY <span class="tm-symbol">&trade;</span></h2>
+        </a>
+    </li>
+</ul>
+<ul>
+
 <li class="list-inline-item dropdown">
     <div class="d-flex">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      
+        
+        <a class="{% if grand_total %}font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none pl-5" href="{% url 'view_bag' %}">
             <div class="text-center">
-                <div><i class="fas fa-search fa-lg"></i></div>
-                <p class="my-0">Search</p>
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0">
+                    {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                        $0.00
+                    {% endif %}
+                </p>
             </div>
         </a>
-        
-            <!-- <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-                <form class="form" method="GET" action="">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div> -->
-            <a class="{% if grand_total %}font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
-                <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                    <p class="my-0">
-                        {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
-                        {% else %}
-                            $0.00
-                        {% endif %}
-                    </p>
-                </div>
-            </a>
     </div>
-    
-   
-   
 </li>
-<li class="list-inline-item">
-   
-</li>
+
 </ul>
 

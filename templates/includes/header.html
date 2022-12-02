@@ -1,10 +1,6 @@
 <div class="row m-0 d-none d-lg-flex topnav bg-topnav">
     <div class="col-4 col-lg-4 p-0 my-auto justify-content-center align-items-center d-flex">
             <div class="d-flex">
-             
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars menu-border"></i>
-                </button> -->
                 <div class="d-flex p-2">
                     <a class="text-black nav-link d-block d-flex" href="#" id="nav-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user mt-1 mx-2"></i>
@@ -25,8 +21,6 @@
                     </div>
                     
                 </div>
-                
-          
             </div>
     </div>
     <div class="col-4 col-lg-4 my-auto py-1 py-lg-0">
@@ -34,33 +28,12 @@
             <h1 class="ivory-size">IVORY <span class="tm-symbol">&trade;</span></h1>
         </a>
     </div>
-    <div class="col-4 col-lg-4 my-auto py-1 py-lg-0 d-flex justify-content-center">
-        <!-- <form method="GET" action="{% url 'products' %}" class="my-auto">
-            <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="value" placeholder="Search our site">
-                <div class="input-group-append">
-                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </form> -->
-        <!-- <form id="app" action="{% url 'products' %}" method="GET" class="d-flex">
-            <label :data-state="state" for="search" class="m-0">
-                
-                <input type="text" id="search" placeholder="Search" name="value" @click="state = 'opan'" @blur="state='close'" >
-                
-                <i type="submit" class="fa fa-search" @click="" aria-hidden="true"></i>
-            </label>
-        </form> -->
-                                                                                
+    <div class="col-4 col-lg-4 my-auto py-1 py-lg-0 d-flex justify-content-center">                                             
         <div class="d-flex my-auto">
             <a class="{% if grand_total %}font-weight-bold{% else %}text-black{% endif %} nav-link p-0 d-flex" href="{% url 'view_bag' %}">
                 <i class="fas fa-shopping-bag fa-lg my-auto mx-2"></i>
                 <p class="my-0 mybag-text">My Bag</p>
-                <p class="mx-2 my-auto">
+                <p class="mx-2 d-blockk my-auto">
                     {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
                     {% else %}
@@ -78,7 +51,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars menu-border"></i>
             </button>
-            <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="text-black nav-link my-auto d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <i class="fas fa-user fa-lg"></i>
                     <p class="my-0">My Account</p>
@@ -100,12 +73,13 @@
 
         {% include 'includes/mobile-top-header.html' %}
         {% include 'includes/main-nav.html' %}
-<div class="container-fluid">
+
+    </nav>
+</div>
 <div id="delivery-banner" class="row text-center">
     <div class="col mx-0 px-0 bg-black text-white">
         <h4 class="logo-font text-white m-0 bg-topnav">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
     </div>            
-</div>
 </div>
 
 
