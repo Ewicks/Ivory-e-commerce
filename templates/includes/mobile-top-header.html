@@ -10,16 +10,14 @@
 
 <li class="list-inline-item dropdown">
     <div class="d-flex">
-      
-        
         <a class="{% if grand_total %}font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none pl-5" href="{% url 'view_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
-                        ${{ grand_total|floatformat:2 }}
+                        £{{ grand_total|floatformat:2 }}
                     {% else %}
-                        $0.00
+                        £0.00
                     {% endif %}
                 </p>
             </div>
