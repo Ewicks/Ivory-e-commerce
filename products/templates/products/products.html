@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
+            <h2 class="products-title">Products</h2>
             {% for a in current_categories %}
                 <a href="{% url 'products' %}?category={{ a.name }}" class="text-decoration-none category-badge">
                     <span class="p-2 badge badge-white text-black rounded-0 border border-dark">{{ a.friendly_name }}</span>

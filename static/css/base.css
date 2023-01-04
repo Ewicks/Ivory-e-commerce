@@ -6,6 +6,10 @@ ul {
     padding: 0px;
 }
 
+.bag-height {
+    height: 50vh !important;
+}
+
 #page-container {
     position: relative;
     min-height: 100vh;
@@ -549,7 +553,7 @@ label[data-state="close"] input {
   }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .nav-link {
         padding: 0.1rem;
         font-size: 10px;
