@@ -11,20 +11,8 @@ ul {
     padding: 0px;
 }
 
-.bag-height {
-    height: 50vh !important;
-}
-
-
-
 .page-container {
-    /* position: relative;
-    min-height: 100vh; */
     flex: 1 0 auto;
-}
-  
-.content-wrap {
-padding-bottom: 2.5rem;
 }
 
 .footer {
@@ -47,6 +35,11 @@ body {
     height: calc(100vh - 148px);
     font-size: 20px;
 }
+
+.black-hover:hover {
+    color: black;
+}
+
 .bold {
     font-weight: 600 !important;
 }
@@ -111,7 +104,7 @@ select:invalid, select option[value=''] {
 }
 
 .text-gray {
-    color: gray !important;
+    color: gray;
 }
 
 .vertical {
@@ -573,25 +566,33 @@ label[data-state="close"] input {
 @media (max-width: 550px) {
     .nav-link {
         padding: 0.1rem;
-        font-size: 15px;
+        font-size: 20px;
     }
    
     .logo-font {
         font-size: 35px;
+    }
+
+    .small-device-flex {
+        margin: 70px 0px;
+    }
+
+    .text-black {
+        font-size: 15px;
     }
 }
 
 
 @media (max-width: 400px) {
     .nav-link {
-        padding: 0.1rem;
-        font-size: 13px;
+        font-size: 20px;
     }
    
     .logo-font {
         font-size: 25px;
     }
-
-   
 }
+
+
+
 
