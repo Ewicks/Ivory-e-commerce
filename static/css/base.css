@@ -17,19 +17,18 @@ ul {
 
 
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
+.page-container {
+    /* position: relative;
+    min-height: 100vh; */
     flex: 1 0 auto;
 }
   
-#content-wrap {
-padding-bottom: 2.5rem;    /* Footer height */
+.content-wrap {
+padding-bottom: 2.5rem;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100%;
     height: 2.5rem;
     flex-shrink: 0;
@@ -56,8 +55,6 @@ body {
     font-size: 80px;
 }
 
-
-
 .position {
     display: flex;
     flex-direction: column;
@@ -81,11 +78,6 @@ a {
     top: 70%;
     left: 60px;
 }
-
-/* .image-overlay {
-    height: 100%;
-    width: 100%;
-} */
 
 .menu-border {
     border: 2.5px black solid;
@@ -127,9 +119,7 @@ select:invalid, select option[value=''] {
     height: 200px;
     position:absolute;
     left: 33%;
-    height: calc(100vh - 153px);
-    
-    /* bottom: 50%; */
+    height: calc(100vh - 153px);    
   }
 
 .nav-columns {
@@ -148,8 +138,6 @@ select:invalid, select option[value=''] {
     height: 120px;
     width: 100%;
 }
-
-
 
 .bg-topnav{
     background-color: rgb(244, 222, 197);
