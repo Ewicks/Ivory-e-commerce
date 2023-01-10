@@ -123,11 +123,8 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 
 ### Future Features
 
-- Allowing the user to filter posts by how many likes and comments each post has.
-
-- Allow each user to only edit or delete the posts they created.
-
-- Create a section where a user can donate money too support the ongoing publications.
+- Make the stripe payments real instead of fake
+- Add a reviews section where users can comment on clothing
 
 ### Bugs/Errors encountered during development
 
@@ -136,23 +133,7 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 * The blog post images was displaying locally but not in Heroku, so instead of using the dynamic image pathing, I uploaded the images to Cloudinary and used the url to display them within a if statement to get them working on Heroku.
 ![issue](doc/images/Image-path-bug.png)
 
-* This is isn't a bug but I changed the add post and edit post views from class based views to function based views, becuase they are shorter, cleaner and works well in this instance. 
 
-* Missing comma at the end of this line "STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]" in manage.py.
-
-* When the user is using a smaller device, the row of images would become a column of images. I needed to swap the middle two div's around so that the step title was above the image where as in the image below it is below. I used to order porperty in the media query section to swap them around on 800px width.
-![Issue](doc/images/about-swap-div.png)
-
-* I used JavaScript so that when the user would hover over the bottom half of a post, the title would change color. This was only working for the first post, so I used CSS instead which is a easier way of doing this as seen in the image below
-![Issue](doc/images/hover-title-issue.png)
-
-* When the user clicks on the add post button, the form would display with the error This field is required on each field on the form when the user has not submitted the form yet. This was becuase in views.py addd_post function I was referencing 'post_form' before assignment. My function was not handling GET requests, so I added the else block to handle this, so that when the form loads without any errors because the user has not made a post request yet. See image belo
-
-![Add_Post View](doc/images/addpost-view.png)
-
-* When the user hovered over one of the navbar page elements that takes the user to a new page. For example, the blog button, all the page elements would move up 2 pixels when I hovered over one of them. To fix this I gave the class border-line a transparent border-bottom of 2px so that when the hover effect appears 2px border-bottom isn't added, instead it will be replaced with the red color via the hover css below.
-
-![Hover issue](doc/images/hover-issue.png)
 
 
 ## Technologies Used
@@ -167,7 +148,6 @@ Frameworks, Libraries & Programs Used
 
 - [amiresponsive](https://ui.dev/amiresponsive) to display the responsive website image on different size devices.
 - [Balsamiq](https://balsamiq.com) to create wireframes.
-- [Cloudinary](https://cloudinary.com) used to upload, store, manage, minipulate and provide images.
 - [Django](https://www.djangoproject.com) is a free open-source Python web framework that follows the model-template-views architectural pattern.
 - [Font Awesome](https://fontawesome.com) used to display icons for asthetic purposes
 - [Git](https://git-scm.com) is version control software which can be used via the Gitpod terminal to commit and push to GitHub
