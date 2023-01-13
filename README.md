@@ -51,12 +51,12 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 
 ## Design
 ### Wireframes
-<details>
-  <summary>Click here to view all wireframes both Desktop & mobile:</summary>
-
+![Home Page](docs/wireframes/home-wireframe.png)
+![All Products](docs/wireframes/all-products-wireframe.png)
+![Products Page](docs/wireframes/product-wireframe.png)
   
 
-  </details>
+
 
 
 ### Database Schema
@@ -128,11 +128,7 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 
 ### Bugs/Errors encountered during development
 
-* Postgress database url link changed in Heroku on it's own, so I copied and pasted the new one into the env.py file.
-
-* The blog post images was displaying locally but not in Heroku, so instead of using the dynamic image pathing, I uploaded the images to Cloudinary and used the url to display them within a if statement to get them working on Heroku.
-![issue](doc/images/Image-path-bug.png)
-
+* 
 
 
 
