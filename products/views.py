@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 from django.core.paginator import Paginator
 from .models import Product, Category
 from .forms import ProductForm
+from datetime import datetime, timedelta
 
 
 def all_products(request):
@@ -35,7 +36,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -47,7 +48,8 @@ def all_products(request):
                 messages.error(
                     request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-        
+
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             all_products = products.filter(queries)
 
@@ -62,6 +64,20 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+def latest_drop_products(request):
+
+    latest_drop_prodcucts = products.exclude(data_added__lt=(datetime.today() - timedelta(weeks=1)))
+
+    context = {
+        'latest_drop_products': latest_drop_products,
+    }
+
+    return render(request, 'products/latest_drops.html', context)
+
+
+
 
 
 def product_detail(request, product_id):
@@ -85,6 +101,7 @@ def add_product(request):
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
+        print(form).values()
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
@@ -93,7 +110,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
