@@ -136,6 +136,9 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 * After migrating changes to the database, this error occured, to fix this I deleted the database and created a new one by deleting all mirations and pycache files within the migratations folder. I also reset the database on ElephantSQL.
 ![Bug](docs/images/database-error.png)
 
+* On the login and sign up pages, when the user inputted invalid data, the error message would appear and push the html elements down and under under the footer. This was becuase the space within the header and footer had a height of 60vh, this was forcing the height of the page so that the elements could not shift down without going underneath the footer.
+![Bug](docs/images/overlap-elements-bug.png)
+
 
 
 
@@ -193,34 +196,20 @@ Signup Page
 
 ### Python Validation
 
-Here are the files within the Blog App.
+## Flake8
 
-Admin 
-![Admin](doc/images/python-checker-admin.png)
+Flake8 was used because pep8online.com website is down. Migrations errors remain as advised by Code Institute.
 
-Forms
-![Forms](doc/images/python-checker-forms.png)
-
-Models
-![Models](doc/images/python-checker-models.png)
-
-Urls
-![Urls](doc/images/python-checker-urls.png)
-
-Views
-![Urls](doc/images/python-checker-views.png)
+![Flake8](docs/images/flake8-validation.png)
 
 ### Javascript Validation
 
-Index Page
 
-- I have used Jquery within this section which jshint does not account for.
+Stripe JS
+![Stripe JS](docs/images/stripe-js-validation.png)
 
-![Index Page](doc/images/jshint-index.png)
-
-Update Page
-
-![Update Page](doc/images/jshint-update.png)
+Quantity button
+![Quantity Button](docs/images/quantity-js-validation.png)
 
 ### Browser Compatibility
 
