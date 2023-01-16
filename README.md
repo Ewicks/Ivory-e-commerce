@@ -128,7 +128,10 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 
 ### Bugs/Errors encountered during development
 
-* 
+
+
+* There was an extra excess white space to the right of the screen, to fix this I placed a p-0 so there was no padding on the row the image was on.
+![Bug](docs/images/white-space-bug.png)
 
 
 
