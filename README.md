@@ -133,6 +133,11 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 * There was an extra excess white space to the right of the screen, to fix this I placed a p-0 so there was no padding on the row the image was on.
 ![Bug](docs/images/white-space-bug.png)
 
+* After migrating changes to the database, this error occured, to fix this I deleted the database and created a new one by deleting all mirations and pycache files within the migratations folder. I also reset the database on ElephantSQL.
+![Bug](docs/images/database-error.png)
+
+
+
 
 
 ## Technologies Used
@@ -161,31 +166,30 @@ Frameworks, Libraries & Programs Used
 ### The W3C Markup Validator
 
 Home Page
+![Home Page](docs/images/html-validator-home.png)
 
-![Home Page](doc/images/html-checker-index.png)
-About Page
+Products Page
+![Products Page](docs/images/html-validator-products.png)
 
-![About Page](doc/images/html-checker-about.png)
+Product Page
+![Product Page](docs/images/html-validator-product.png)
 
-Blog Page
-![Blog Page](doc/images/html-checker-blog.png)
+New Drops Page
+![New Drops Page](docs/images/html-validator-latest-drops.png)
 
 Contact Page
-![Contact Page](doc/images/html-checker-contact.png)
+![Contact Page](docs/images/html-validator-contact.png)
+
+
+Login Page
+![Login Page](docs/images/html-validator-login.png)
 
 Signup Page
-![Signup Page](doc/images/html-checker-signup.png)
-
-Topic Page
-
-![Topic Page](doc/images/html-checker-topic.png)
-
-Search Posts Page
-![Seach Posts Page](doc/images/html-checker-seachposts.png)
+![Signup Page](docs/images/html-validator-signup.png)
 
 ### CSS Validation
 
-![CSS Checker](doc/images/css-checker.png)
+![CSS Checker](docs/images/html-validator-css.png)
 
 ### Python Validation
 
