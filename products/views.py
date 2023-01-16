@@ -67,17 +67,14 @@ def all_products(request):
 
 
 def latest_drop_products(request):
-
-    latest_drop_prodcucts = products.exclude(data_added__lt=(datetime.today() - timedelta(weeks=1)))
+    products = Product.objects.all()
+    products = products.exclude(data_added__lt=(datetime.today() - timedelta(weeks=1)))
 
     context = {
         'latest_drop_products': latest_drop_products,
     }
 
     return render(request, 'products/latest_drops.html', context)
-
-
-
 
 
 def product_detail(request, product_id):

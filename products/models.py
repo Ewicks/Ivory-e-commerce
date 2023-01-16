@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 
 class Category(models.Model):
 
@@ -15,7 +15,6 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
-
 class Product(models.Model):
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
@@ -28,8 +27,8 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    latest_drop_page = models.BooleanField(default=True, null=True, blank=True)
-    date_added = models.DateField(auto_now_add=True)
+    latest_drop_page = models.BooleanField(default=False, null=True, blank=True)
+    date_added = models.DateField(default=timezone.now)
 
     def __str__(self):
         return self.name
