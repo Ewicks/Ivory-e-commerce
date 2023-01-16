@@ -68,7 +68,7 @@ def all_products(request):
 
 def latest_drop_products(request):
     products = Product.objects.all()
-    products = products.exclude(data_added__lt=(datetime.today() - timedelta(weeks=1)))
+    latest_drop_products = products.exclude(date_added__lt=(datetime.today() - timedelta(weeks=1)))
 
     context = {
         'latest_drop_products': latest_drop_products,
@@ -98,7 +98,6 @@ def add_product(request):
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
-        print(form).values()
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
