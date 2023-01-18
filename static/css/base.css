@@ -10,8 +10,8 @@ body {
     height: 100%;
 }
 
-.testinggg {
-    flex: 0 1 auto;
+.navbar {
+    height: 101px;
 }
 
 html {
@@ -151,7 +151,7 @@ select:invalid, select option[value=''] {
     border-left: 2px solid gray;
     height: 200px;
     position:absolute;
-    left: 33%;
+    left: 30%;
     height: calc(100vh - 153px);    
   }
 
