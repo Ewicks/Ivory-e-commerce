@@ -203,8 +203,13 @@ Frameworks, Libraries & Programs Used
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
 - [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Bulma](https://bulma.io/)Bulma used to support the line height of Font Awesome icons.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) simplifying and rendering on several forms.
+- [Dj_database_url](https://pypi.org/project/dj-database-url/) dj_database_url library used to allow Database urls to connect to the PostgreSQL database.
 
 ## Database Design
+
+
 
 ## Agile Development Process
 

@@ -1,3 +1,19 @@
+# Testing
+
+Return back to the [README.md](README.md) file.
+
+### HTML
+
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+| Page | W3C URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Findex.html) | ![screenshot](docs/images/html-validator-home.png) | Pass: No Errors |
+| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-contact.png) | Pass: No Errors |
+| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
+| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
+| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
+| x | x | x | repeat for all remaining HTML files |
 ### The W3C Markup Validator
 
 Home Page
