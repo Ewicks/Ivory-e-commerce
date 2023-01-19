@@ -36,7 +36,28 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 - [Acknowledgements](#acknowledgements)
 
 
-## UX User Experience
+## UX
+
+This website was desgined to have an old fashioned, relic feel to it. The simplicity and use of colors were used to create this.
+
+### Colour Scheme
+
+Explain your colours and the colour scheme.
+
+- `#000` used for primary text.
+- `#f4dec5` used for the secondary background color
+- `#F8F5F5` used for the main background color
+
+### Typography
+
+I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it which corresponds with the design of the website. This is a popular font thats used in many projects. I also used the bag,profile, linkedin and github icons from font awesome so the page has less text and more images which makes the site easier to navigate.
+
+
+- [Roboto](https://fonts.google.com/specimen/Montserrat) was used and the boldness varies where appropriate.
+
+
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site.
+
 ### User Stories
 
 ### Site Admin/Creator:
