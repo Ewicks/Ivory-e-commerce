@@ -62,8 +62,31 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 ### Site Admin/Creator:
 
+- As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access. [#4](https://github.com/Ewicks/Ivory/issues/4)
+
+- - As a Administrator I want to be able to view newsletter signups in the admin panel. [#6](https://github.com/Ewicks/Ivory/issues/6)
+
+- - As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have. [#7](https://github.com/Ewicks/Ivory/issues/7)
 
 ### Site User
+
+- As a Site User, I can access the site on differing devices, so I can interact with content on my preferred device. [#1](https://github.com/Ewicks/Ivory/issues/1)
+
+- As a Site User i can press the back button if I get a 404 error page so that I can easily go back to the website. [#3](https://github.com/Ewicks/Ivory/issues/3)
+
+- As a Site User, I can view my recent orders, so I can quickly check all the items that was ordered were the correct ones. [#5](https://github.com/Ewicks/Ivory/issues/5)
+
+- As a Site User I want to be able to register for a newsletter. [#11](https://github.com/Ewicks/Ivory/issues/11)
+
+- As a Site User, I can learn view the product up close, so that I can make an informed decision to purchase. [#13](https://github.com/Ewicks/Ivory/issues/13)
+
+- As a Site User, I can search for products by entering descriptive words, so that I can find what I want quickly. [#12](https://github.com/Ewicks/Ivory/issues/12)
+
+- As a Site User I want to be able to update my card details on my account and also view the saved card details. [#9](https://github.com/Ewicks/Ivory/issues/9)
+
+- As a Site User I want to be able to view all items that will be purchased before I proceed to checkout. [#10](https://github.com/Ewicks/Ivory/issues/10)
+
+- As a Site User I want to be able to register an account. [#8](https://github.com/Ewicks/Ivory/issues/8)
 
 
 ## Agile Development Process
@@ -77,11 +100,7 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 ![Products Page](docs/wireframes/product-wireframe.png)
   
 
-
-
-
 ### Database Schema
-
 
 
 
