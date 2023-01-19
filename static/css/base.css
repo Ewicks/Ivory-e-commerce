@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    height: 101px;
+    min-height: 101px;
 }
 
 html {

@@ -88,21 +88,16 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - As a Site User I want to be able to register an account. [#8](https://github.com/Ewicks/Ivory/issues/8)
 
+## Wireframes 
 
-## Agile Development Process
-
-
-
-## Design
-### Wireframes
-![Home Page](docs/wireframes/home-wireframe.png)
-![All Products](docs/wireframes/all-products-wireframe.png)
-![Products Page](docs/wireframes/product-wireframe.png)
-  
-
-### Database Schema
-
-
+<details>
+    <summary><b>Wireframes</b></summary>
+    <p align="center">
+        <img src="docs/wireframes/home-wireframe.png" alt="Homepage wireframe"/>
+        <img src="docs/wireframes/all-products-wireframe.png" alt="all-products wireframe"/>
+        <img src="docs/wireframes/product-wireframe.png" alt="product wireframe"/>
+    </p>
+</details><br>
 
 ## features 
 
@@ -160,7 +155,6 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 ![404 Error Page](doc/images/404-page.png)
 
 
-
 ### Future Features
 
 - Make the stripe payments real instead of fake
@@ -178,6 +172,9 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 * On the login and sign up pages, when the user inputted invalid data, the error message would appear and push the html elements down and under under the footer. This was becuase the space within the header and footer had a height of 60vh, this was forcing the height of the page so that the elements could not shift down without going underneath the footer.
 ![Bug](docs/images/overlap-elements-bug.png)
+
+- explain mobile nav bug
+docs/images/mobile-nabar-bug.png
 
 
 
@@ -203,6 +200,72 @@ Frameworks, Libraries & Programs Used
 - [Google Chrome Dev tools](https://developer.chrome.com/docs/devtools/) used for debugging code
 - [Heroku](https://www.heroku.com) is used to deploy this project. Heroku is a cloud platform as a service supporting several programming languages.
 - [JQuery](https://jquery.com/) is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation
+- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
+- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+
+## Database Design
+
+## Agile Development Process
+
+### GitHub Projects
+
+[GitHub Projects](https://github.com/Ewicks/Ivory/projects) served as an Agile tool for this project.
+
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+Consider adding a basic screenshot of your Projects Board.
+
+![screenshot](docs/images/projects-board.png)
+
+### GitHub Issues
+
+[GitHub Issues](https://github.com/Ewicks/Ivory/issues) served as an another Agile tool.
+There, I used my own **User Story Template** to manage user stories.
+
+It also helped with milestone iterations on a weekly basis.
+
+Consider adding a screenshot of your Open and Closed Issues.
+
+![Screenshot](docs/images/github-issues.png)
+
+## Ecommerce Business Model
+
+This site sells goods to individual customers, and therefore follows a `Business to Customer` model.
+It is of the simplest **B2C** forms, as it focuses on individual transactions, and doesn't need anything
+such as monthly/annual subscriptions.
+
+It is still in its early development stages, although it already has a newsletter.
+
+A newsletter list can be used by the business to send regular messages to site users.
+For example, what items are on special offer, new items in stock,
+updates to business hours, notifications of events, and much more!
+
+## Search Engine Optimization (SEO) & Social Media Marketing
+
+### Keywords
+
+I've identified some appropriate keywords to align with my site, that should help users
+when searching online to find my page easily from a search engine.
+This included a series of the following keyword types
+
+**Short-tail (head terms) keywords**
+- clothes
+- T-shirts
+- Mens Clothing
+- Womens Clothing
+- Jeans
+- Shorts
+- Socks
+- Jackets
+- formal dresses
+- cargos
+**Long-tail keywords**
+-
+
+I also played around with [Word Tracker](https://www.wordtracker.com) a bit
+to check the frequency of some of my site's primary keywords (only until the free trial expired).
+
 
 ## Testing
 
