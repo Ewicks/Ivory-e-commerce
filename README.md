@@ -64,9 +64,9 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access. [#4](https://github.com/Ewicks/Ivory/issues/4)
 
-- - As a Administrator I want to be able to view newsletter signups in the admin panel. [#6](https://github.com/Ewicks/Ivory/issues/6)
+- As a Administrator I want to be able to view newsletter signups in the admin panel. [#6](https://github.com/Ewicks/Ivory/issues/6)
 
-- - As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have. [#7](https://github.com/Ewicks/Ivory/issues/7)
+- As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have. [#7](https://github.com/Ewicks/Ivory/issues/7)
 
 ### Site User
 
@@ -78,7 +78,7 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - As a Site User I want to be able to register for a newsletter. [#11](https://github.com/Ewicks/Ivory/issues/11)
 
-- As a Site User, I can learn view the product up close, so that I can make an informed decision to purchase. [#13](https://github.com/Ewicks/Ivory/issues/13)
+- As a Site User, I can view the product up close, so that I can make an informed decision to purchase. [#13](https://github.com/Ewicks/Ivory/issues/13)
 
 - As a Site User, I can search for products by entering descriptive words, so that I can find what I want quickly. [#12](https://github.com/Ewicks/Ivory/issues/12)
 
@@ -159,26 +159,6 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - Make the stripe payments real instead of fake
 - Add a reviews section where users can comment on clothing
-
-### Bugs/Errors encountered during development
-
-
-
-* There was an extra excess white space to the right of the screen, to fix this I placed a p-0 so there was no padding on the row the image was on.
-![Bug](docs/images/white-space-bug.png)
-
-* After migrating changes to the database, this error occured, to fix this I deleted the database and created a new one by deleting all mirations and pycache files within the migratations folder. I also reset the database on ElephantSQL.
-![Bug](docs/images/database-error.png)
-
-* On the login and sign up pages, when the user inputted invalid data, the error message would appear and push the html elements down and under under the footer. This was becuase the space within the header and footer had a height of 60vh, this was forcing the height of the page so that the elements could not shift down without going underneath the footer.
-![Bug](docs/images/overlap-elements-bug.png)
-
-- explain mobile nav bug
-docs/images/mobile-nabar-bug.png
-
-
-
-
 
 ## Technologies Used
 
