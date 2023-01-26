@@ -18,8 +18,7 @@ def index(request):
     #  """Send the user a confirmation email"""
     cust_email = 'LOL'
     subject = render_to_string(
-        'home/confirmation_emails/newsletter_email_subject.txt',
-        {})
+        'home/confirmation_emails/newsletter_email_subject.txt')
     body = render_to_string(
         'home/confirmation_emails/newsletter_email_body.txt',
         {'contact_email': settings.DEFAULT_FROM_EMAIL})
