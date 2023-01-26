@@ -1,0 +1,13 @@
+Hello!
+
+This is a confirmation of your subscription to Ivory's newsletter.
+
+We hope you enjoy your weekly emails now on.
+
+If you have any questions, feel free to contact us at {{ contact_email }}
+
+Thank you for your subscription!
+
+Sincerely,
+
+Ivory

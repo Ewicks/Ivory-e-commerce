@@ -14,6 +14,14 @@ body {
     height: 100%;
 }
 
+.btn-newsletter {
+    border: 1px solid black;
+}
+.btn-newsletter:hover {
+    color: white;
+    background: #000;
+}
+
 .navbar {
     min-height: 101px;
 }
