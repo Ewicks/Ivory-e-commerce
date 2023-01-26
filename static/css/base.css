@@ -1,7 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 
 body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    background-color: rgb(249, 245, 245);
+    color: black;
+    height: calc(100vh - 148px);
+    font-size: 20px;
 }
 
 .box {
@@ -66,12 +70,6 @@ ul {
     object-position: top;
 }
 
-body {
-    background-color: rgb(249, 245, 245);
-    color: black;
-    height: calc(100vh - 148px);
-    font-size: 20px;
-}
 
 .black-hover:hover {
     color: black;
@@ -84,8 +82,6 @@ body {
 .ivory-size {
     font-size: 80px;
 }
-
-
 
 .position {
     display: flex;
@@ -279,7 +275,8 @@ fieldset {
 
 
 .home-title {
-    color: white !important;
+    color: black !important;
+    /* color: white !important; */
     font-size: 100px;
     display: flex;
 }
@@ -290,7 +287,8 @@ fieldset {
 }
 
 .bg-topnav{
-    background-color: rgb(244, 222, 197);
+    background-color: white;
+    /* background-color: rgb(244, 222, 197); */
 }
 
 .fa-user {

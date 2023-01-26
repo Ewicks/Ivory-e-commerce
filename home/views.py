@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import ContactForm
+from .forms import ContactForm, NewsletterForm
 from django.contrib import messages
 
 
 def index(request):
-    return render(request, 'home/index.html', {})
+    form = NewsletterForm
+    return render(request, 'home/index.html', {'form': form})
 
 
 def contact(request):

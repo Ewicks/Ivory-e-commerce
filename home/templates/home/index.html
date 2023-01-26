@@ -36,7 +36,14 @@
         </div>
         <div class="vertical"></div>
     </div>
+    <form class="m-5 text-center" action="" method="POST">
+        {% csrf_token %}
+        <h2>Sign Up for weekly newsletter</h2>
+        {{ form.as_p }}
+        <button class="btn btn-newsletter" name="submit" type="submit" id="home-submit">Submit</button>
+    </form>
 </div> 
+
 {% endblock %}
 
 
