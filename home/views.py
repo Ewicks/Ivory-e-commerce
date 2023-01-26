@@ -12,22 +12,22 @@ def index(request):
     if request.method == "POST":
         form = NewsletterForm(request.POST)
         if form.is_valid():
+            #  """Send the user a confirmation email"""
+            cust_email = form.cleaned_data.get("email")
+            subject = render_to_string(
+                'home/confirmation_emails/newsletter_email_subject.txt')
+            body = render_to_string(
+                'home/confirmation_emails/newsletter_email_body.txt',
+                {'contact_email': settings.DEFAULT_FROM_EMAIL})
+            send_mail(
+                    subject,
+                    body,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [cust_email]
+                )
             form.save()
-            messages.success(request, 'You have subscribed')
+
             return redirect('home')
-    #  """Send the user a confirmation email"""
-    cust_email = 'LOL'
-    subject = render_to_string(
-        'home/confirmation_emails/newsletter_email_subject.txt')
-    body = render_to_string(
-        'home/confirmation_emails/newsletter_email_body.txt',
-        {'contact_email': settings.DEFAULT_FROM_EMAIL})
-    send_mail(
-            subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
-            [cust_email]
-        )
 
     return render(request, 'home/index.html', {'form': form})
 
