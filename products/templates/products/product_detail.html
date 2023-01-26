@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-center lightblue-bg">
+        <!-- <div class="row d-flex justify-content-center lightblue-bg">
             <div class="col-12 col-lg-10 mx-auto" style="width: 800px;">
                 <h3 class="mt-4">Comments</h3>
                 <hr>
@@ -117,8 +117,8 @@
 
             </div>
         </div>
-        
-        <div class="row row d-flex justify-content-center lightblue-bg">
+         -->
+        <!-- <div class="row row d-flex justify-content-center lightblue-bg">
             <div class="col-12 col-lg-10 mx-auto" style="width: 800px;">
                 <div class="card-body p-0">
                     {% if user.is_authenticated %}
@@ -134,32 +134,20 @@
                 </div>
             </div>
         </div>
-    </div>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    </div> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> -->
 <section class="content-item" id="comments">
     <div class="container">   
     	<div class="row">
             <div class="col-sm-8">   
-                <!-- <form>
-                	<h3 class="pull-left">New Comment</h3>
-                	<button type="submit" class="btn btn-normal pull-right">Submit</button>
-                    <fieldset>
-                        <div class="row">
-                          
-                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
-                                <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
-                            </div>
-                        </div>  	
-                    </fieldset>
-                </form> -->
                 <form method="post" style="margin-top: 1.3em;">
                 	<h3 class="pull-left">New Comment</h3>
                     <fieldset>
-                        <div class="row">
+                        <div class="wrap-form">
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <button type="submit"
-                                class="btn border-dark bd-highlight text-black btn-clear">Submit</button>
+                                class="btn comment-btn border-dark bd-highlight text-black btn-clear">Submit</button>
                         </div>  	
                     </fieldset>
               

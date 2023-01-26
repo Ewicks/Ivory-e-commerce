@@ -120,7 +120,7 @@ a {
     border: 2.5px black solid;
     border-radius: 50%;
     padding: 8px 10px;
-    background-color: #F3DEC5;
+    background-color: #fff;
 }
 
 button {
@@ -312,7 +312,10 @@ fieldset {
 
 .products-border {
     border: 2px solid black;
-    
+}
+
+.product-home-btn:hover {
+    color: gray;
 }
 
 .img-height {
@@ -804,7 +807,23 @@ label[data-state="close"] input {
 
 #comments .btn {
 	margin: 0px;
+    padding: 5px 0px;
+    align-items: center;
+    width: 30%;
+}
+
+label {
     padding: 0px;
+}
+
+.wrap-form {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.comment-btn:hover {
+    background: black;
+    color: #fff !important;
 }
 
 #comments form fieldset {

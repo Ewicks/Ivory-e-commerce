@@ -27,14 +27,11 @@
 
       
         <li class="nav-item dropdown">
-            <a class="nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+            <a class="nav-link text-black" href="{% url 'latest_drop' %}" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Lastest Drop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Latest Drops</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'latest_drop' %}" class="dropdown-item">Latest Drop</a>
             </div>
         </li>
     </ul>
