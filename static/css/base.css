@@ -2,7 +2,7 @@
 
 body {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
-    background-color: rgb(249, 245, 245);
+    background-color: #fff;
     color: black;
     height: calc(100vh - 148px);
     font-size: 20px;
