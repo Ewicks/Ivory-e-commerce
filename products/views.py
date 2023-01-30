@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.core.paginator import Paginator
-from .models import Product, Category
+from .models import Product, Category, Comment
 from .forms import ProductForm, CommentForm
 from datetime import datetime, timedelta
 
@@ -80,7 +80,9 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    num_comments = Comment.objects.all()
     comments = product.comments
+    print(comments)
     comment_form = CommentForm(data=request.POST)
     if comment_form.is_valid():
         comment_form.instance.email = request.user.email
@@ -95,6 +97,7 @@ def product_detail(request, product_id):
         'product': product,
         "comments": comments,
         "comment_form": comment_form,
+        'num_comments': num_comments,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -170,3 +173,11 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def delete_comment(request, comment_id):
+    commment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    return redirect(reverse('products'))
+
