@@ -146,7 +146,15 @@ Defensive programming was manually tested with the below user acceptance testing
 ![Bug](docs/images/overlap-elements-bug.png)
 
 - explain mobile nav bug
+- When the user opened the drop down navbar, the elements inside would overlap with the elements on the product page. To fix this I added a min-height to the navbar a min-height of 101px, before it was a height on 101px. The min-height prevents the navbar from shrinking in height creating overlapping issues.
 ![Bug](docs/images/mobile-nabar-bug.png)
+
+
+- When I tried to open a local server via gitpod using the command "python3 manage.py runserver", the page would throw the below error. To fix this is I typed the command "pkill -9 python3" in the terminal. This command was ran to kill all instances of the port server.
+![502 Error](docs/images/502-error.png)
+
+- When the user is in mobile mode, the allauth pages content files half the page. To change this I added "col-12 col-md-6" to the column. This ensures that the contents take up half the page on medium devices and up and mobile devices and below the contents take up the whole page. 
+![Bug](docs/images/mobile-allauth-bug.png)
 
 
 ### GitHub **Issues**

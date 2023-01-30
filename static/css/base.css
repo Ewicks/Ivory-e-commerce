@@ -8,6 +8,7 @@ body {
     font-size: 20px;
 }
 
+
 .box {
     display: flex;
     flex-flow: column;
@@ -737,6 +738,11 @@ label[data-state="close"] input {
     .text-black {
         font-size: 15px;
     }
+
+    .center {
+        text-align: center;
+    }
+    
 }
 
 
@@ -793,12 +799,6 @@ label[data-state="close"] input {
 	font-size:14px;
 	color:#AAAAAA;
 	display:block;
-}
-
-
-#comments {
-    box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
-	background-color:#FFFFFF;
 }
 
 #comments form {
