@@ -300,11 +300,17 @@ Further links for future implementation:
 
 I have incorporate a newsletter sign-up form on my application, to allow users to supply their
 email address if they are interested in learning more. 
+I have used the `send_mail()` functionality used on the webhook.py file to automatically send an email out to the subscribed user confirming they have signed up.
 
-Option 1 (MailChimp):
-- Sign up for a Mailchimp account
-- This allows up to 2,500 subscription email sends per month
-- Incorporate the code and scripts into your project like in the CI lessons.
+
+### Model
+    class Newsletter(models.Model):
+    email = models.EmailField(null=False, blank=False)
+
+    def __str__(self):
+        return self.email
+
+
 
 ## Testing
 
@@ -612,7 +618,8 @@ If you'd like to backup your database models, use the following command for each
 </details>
 
 <br>
-#### Cloning
+
+### Cloning
 
 <details>
     <summary><b>Cloning</b></summary>
@@ -649,13 +656,7 @@ If you'd like to backup your database models, use the following command for each
 </details>
 
 
-
-### Local VS Deployment
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
 ## Credits
-
 
 * W3Schools, youtube clips and stackoverflow resources helped my throughout the project
 
