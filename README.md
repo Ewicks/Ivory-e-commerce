@@ -152,7 +152,7 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - This page provides a link to direct them back to the website if user gets a  navigational page error.
 
-![404 Error Page](doc/images/404-page.png)
+![404 Error](docs/images/404-error.png)
 
 
 ### Future Features
@@ -189,9 +189,10 @@ Frameworks, Libraries & Programs Used
 
 ## Database Design
 
-```python
-
-```
+<details>
+    <summary><b>Database</b></summary>
+    <img src="docs/images/database-schema.png" alt="database schema"/>
+</details>
 
 
 ## Agile Development Process
