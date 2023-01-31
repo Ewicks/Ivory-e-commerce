@@ -57,15 +57,25 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](docs/images/chrome-mobile-products.png) | Works as expected |
 | Safari | ![screenshot](docs/images/safari-product.png) | Minor CSS differences |
 | Safari | ![screenshot](docs/images/safari-contact.png) | Works as expected |
-| Safari | ![screenshot](docs/images/safair-home.png) | Minor differences |
-| Firefox | ![screenshot](docs/images/firefox-products.png) | Does not work as expected |
-| Firefox | ![screenshot](docs/images/safari-contact.png) | Does not work as expected |
-| Firefox | ![screenshot](docs/images/safair-home.png) | Does not work as expected |
-| x | x | repeat for any other tested browsers |
+| Safari | ![screenshot](docs/images/safair-home.png) | Works as expected |
+| Firefox | ![screenshot](docs/images/firefox-products.png) | Works as expected |
+| Firefox | ![screenshot](docs/images/safari-contact.png) | Works as expected |
+| Firefox | ![screenshot](docs/images/safair-home.png) | Works as expected |
 
 
 ### Responsiveness
 
+| Device | Screenshot | Notes |
+| --- | --- | --- |
+| Desktop | ![screenshot](docs/images/checkout-success-page.png) | Works as expected |
+| Desktop | ![screenshot](docs/images/checkout-page.png) | Works as expected |
+| Desktop | ![screenshot](docs/images/safair-home.png) | Works as expected |
+| Tablet | ![screenshot](docs/images/safari-product.png) | Works as expected |
+| Tablet | ![screenshot](docs/images/safair-home.png) | Works as expected |
+| Tablet | ![screenshot](docs/images/safari-contact.png) | Works as expected |
+| Mobile | ![screenshot](docs/images/mobile-checkout.png) | Works as expected |
+| Mobile | ![screenshot](docs/images/mobile-bag.png) | Works as expected |
+| Mobile | ![screenshot](docs/images/chrome-mobile-products.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -90,7 +100,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Home Page | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery Page | | | | |
+| Products Page | | | | |
 | | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
 | | Load gallery images | All images load as expected | Pass | |
 | Contact Page | | | | |
