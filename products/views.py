@@ -95,7 +95,6 @@ def product_detail(request, product_id):
         'product': product,
         "comments": comments,
         "comment_form": comment_form,
-        'num_comments': num_comments,
     }
 
     return render(request, 'products/product_detail.html', context)
