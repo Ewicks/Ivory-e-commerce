@@ -177,7 +177,7 @@ def delete_product(request, product_id):
 
 @login_required
 def delete_comment(request, comment_id):
+    """ Delete comment from the front end """
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()
     return redirect(reverse('products'))
-

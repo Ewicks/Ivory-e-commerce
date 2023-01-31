@@ -4,9 +4,10 @@
 {% block content %}
 <div class="container">
     <div class="row">
+        <!-- Image, Price, Rating, Quantity, Size, Buttons -->
         <div class="col-12 col-md-8 my-5">
             <a href="{{ product.image.url }}" target="_blank">
-                <img class="card-img-top align-items-center img-height-detail img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <img class="card-img-top img-height-detail img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
         </div>
         <div class="col-12 col-md-4 px-3">
@@ -32,10 +33,12 @@
                 </small>
             {% endif %}
             <p class="mt-3">{{ product.description }}</p>
+            <!-- Quantity and size form -->
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col-12">
+                        <!-- Size button -->
                         <p><strong>Size:</strong></p>
                         <select class="form-control rounded-0 w-50 mx-auto" name="product_size" id='id_product_size'>
                             <option value="xs">XS</option>
@@ -46,6 +49,7 @@
                         </select>
                     </div>
                     <div class="col-12">
+                        <!-- Quantity button -->
                         <p class="mt-3"><strong>Quantity:</strong></p>
                         <div class="form-group w-50 mx-auto">
                             <div class="input-group">
@@ -89,10 +93,11 @@
             
         </div>
     </div>
-<section class="content-item">
-    <div class="container">   
+    <div class="container content-item">   
     	<div class="row">
             <div class="col-sm-8">   
+                {% if request.user.is_superuser %}
+                <!-- Form to add comment -->
                 <form method="post" style="margin-top: 1.3em;">
                 	<h3 class="pull-left">New Comment</h3>
                     <fieldset>
@@ -104,37 +109,33 @@
                         </div>  	
                     </fieldset>
                 </form>
+                {% endif %}
                 
                 <h3>{{ num_comments|length }} Comments</h3>
 
-                {% if not product.comments.all %}
-                    No comments yet... <a href="">Add one</a>
-                {% else %}
-                    {% for comment in product.comments.all %}
-                        <bold>
-                             <!-- COMMENT 2 - START -->
-                            <div class="media">
-                                <div class="media-body">
-                                    <h4 class="media-heading">{{ comment.name }}</h4>
-                                    <p>{{ comment.body }}</p>
-                                    <ul class="list-unstyled list-inline media-detail pull-left">
-                                        <li><i class="fa fa-calendar"></i>{{ comment.date_added}}</li>
-                                        {% if request.user.is_superuser %}
-                                            <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
-                                        {% endif %}
+                {% for comment in product.comments.all %}
+                    <bold>
+                            <!-- COMMENT DISPLAYED - START -->
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading">{{ comment.name }}</h4>
+                                <p>{{ comment.body }}</p>
+                                <ul class="list-unstyled list-inline media-detail pull-left">
+                                    <li><i class="fa fa-calendar m-1"></i>{{ comment.date_added }}</li>
+                                    {% if request.user.is_superuser %}
+                                        <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                                    {% endif %}
 
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
-                            <!-- COMMENT 2 - END -->
-                            <br>
-                        </bold>
-                    {% endfor %}
-                {% endif %}
+                        </div>
+                        <!-- COMMENT DISPLAYED - END -->
+                        <br>
+                    </bold>
+                {% endfor %}
             </div>
         </div>
     </div>
-</section>
 </div>
     
 {% endblock %}
