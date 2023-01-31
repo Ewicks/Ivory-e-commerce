@@ -660,14 +660,27 @@ If you'd like to backup your database models, use the following command for each
 
 * W3Schools, youtube clips and stackoverflow resources helped my throughout the project
 
+- I got the homepage image from https://www.andsons.co.uk/products/sons-sunday-shirt-dark-tan?variant=32897066631273&gclid=CjwKCAiAleOeBhBdEiwAfgmXfxB34ANKIdh2IZx1NYUuheEr1rHMO63gojIL-EShmfqD-TFyQeJb5xoCtjoQAvD_BwE.
+
+- I used this youtube to help build the comment section. https://www.youtube.com/watch?v=OuOB9ADT_bo
+
 ## Content
-[Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files 
+- [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files 
+
+- [Stack Overflow](https://stackoverflow.com/)
+
+- [w3schools](https://www.w3schools.com/)
+
+- [Mozilla](https://developer.mozilla.org/en-US/)
+
+- [Youtube](https://www.youtube.com/)
 
 
 ## Acknowledgements
-* I used Code Institute's material in the Full Stack Development course.
-* W3Schools, youtube clips and stackoverflow resources helped my throughout the project
-* Tim - Code Institute mentor
+
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 
 This project is for educational use only and was created for the Code Institute Module.
 
