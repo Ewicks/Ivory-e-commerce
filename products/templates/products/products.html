@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="row mt-1 my-4">
-        <div class="col-12 my-auto d-flex justify-content-between">
+        <div class="col-12 my-auto d-flex justify-content-between wrap-items">
             <form method="GET" action="{% url 'products' %}" class="my-auto">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="value" placeholder="Search our site">
@@ -41,16 +41,10 @@
                     <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
                     <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                 </select>
-                
             </div>
-           
         </div>
-      
-           
     </div>
     <div class="col-12 col-md-6 order-md-first">
-        
-           
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term or current_categories or current_sorting != 'None_None' %}
                 <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
@@ -137,7 +131,6 @@
         {% endif %}
     </ul>
 </div>
-   
 
 
 {% endblock %}

@@ -17,6 +17,8 @@ To make a fake payment use the below credit card detials.
 
 ## Preview
 
+![Screenshot](docs/images/all-responsive-img.png)
+
 
 ### Live Website
 To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.com/)
@@ -45,8 +47,7 @@ This website was desgined to have an old fashioned, relic feel to it. The simpli
 Explain your colours and the colour scheme.
 
 - `#000` used for primary text.
-- `#f4dec5` used for the secondary background color
-- `#F8F5F5` used for the main background color
+- `#fff` used for the main background color
 
 ### Typography
 
@@ -54,7 +55,6 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 
 - [Roboto](https://fonts.google.com/specimen/Montserrat) was used and the boldness varies where appropriate.
-
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site.
 
@@ -189,6 +189,9 @@ Frameworks, Libraries & Programs Used
 
 ## Database Design
 
+```python
+
+```
 
 
 ## Agile Development Process

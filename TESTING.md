@@ -171,3 +171,6 @@ Alternatively, use this link: https://github.com/Ewicks/Ivory/issues
 ![Bug](docs/images/unfixed-bug-header.png)
 
 
+- The toast notification does not update image but updates the title when adding item of clothing to basket.
+
+- The homepage vertical line goes further down when the height of the devices increases.
