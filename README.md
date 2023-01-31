@@ -5,7 +5,7 @@
 Ivory is a modern clothing brand that is selling there stock via their online shop.
 
 This website is for educational purposes only, the website is not setup to receive real payments, only fake payments are viable. 
-To make a fake payment use the below credit card detials.
+To make a fake payment use the below credit card details.
 
 
 * 4242424242424242 (Visa)
@@ -40,18 +40,18 @@ To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.co
 
 ## UX
 
-This website was desgined to have an old fashioned, relic feel to it. The simplicity and use of colors were used to create this.
+This website was designed to have an old fashioned, relic feel to it. The simplicity and use of colors were used to create this.
 
-### Colour Scheme
+### Color Scheme
 
-Explain your colours and the colour scheme.
+Explain your colors and the color scheme.
 
 - `#000` used for primary text.
 - `#fff` used for the main background color
 
 ### Typography
 
-I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it which corresponds with the design of the website. This is a popular font thats used in many projects. I also used the bag,profile, linkedin and github icons from font awesome so the page has less text and more images which makes the site easier to navigate.
+I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it which corresponds with the design of the website. This is a popular font thats used in many projects. I also used the bag,profile, Linkedin and Github icons from font awesome so the page has less text and more images which makes the site easier to navigate.
 
 
 - [Roboto](https://fonts.google.com/specimen/Montserrat) was used and the boldness varies where appropriate.
@@ -99,11 +99,11 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
     </p>
 </details><br>
 
-## features 
+## Features 
 
-### navbar
+### Navbar
 
-- I have created a simple narbar that has a creamy white theme to it. I have also created a mobile navbar that collapes to show a dropdown menu. The mobile menu replaces the main navbar for small to medium devices only.
+- I have created a simple navbar that has a creamy white theme to it. I have also created a mobile navbar that collapses to show a dropdown menu. The mobile menu replaces the main navbar for small to medium devices only.
 
 ![Navbar](docs/images/navbar.png)
 
@@ -119,7 +119,7 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 ### Contact Page
 
-- I used a basic boostrap template for the contact form.
+- I used a basic bootstrap template for the contact form.
 
 ![Contact Page](docs/images/contact-page.png)
 
@@ -209,7 +209,7 @@ Consider adding a basic screenshot of your Projects Board.
 
 ### GitHub Issues
 
-[GitHub Issues](https://github.com/Ewicks/Ivory/issues) served as an another Agile tool.
+[GitHub Issues](https://github.com/Ewicks/Ivory/issues) served as another Agile tool.
 There, I used my own **User Story Template** to manage user stories.
 
 It also helped with milestone iterations on a weekly basis.
