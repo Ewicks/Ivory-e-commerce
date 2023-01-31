@@ -101,18 +101,20 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
 | Products Page | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
+| | Click on product takes user to product page | Pass | |
+| | Load images | All images load as expected | Pass | |
+| Latest Drop Page | | | | |
+| | Click on product takes user to product page | Pass | |
+| | Load images | All images load as expected | Pass | |
 | Contact Page | | | | |
 | | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
+| | Click the Submit button | Redirects user to contact page | Pass | User must click 'Back' button to return |
 | Sign Up | | | | |
 | | Click on Sign Up button | Redirection to Sign Up page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | |
 | | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
 | | Confirm email | Redirects user to blank Sign In page | Pass | |
 | Log In | | | | |
@@ -125,9 +127,18 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
 | Profile | | | | |
 | | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
+| | Click on Edit button | User will be redirected to the edit profile page | Pass | |
+| | Click on My Orders link | User will be redirected to the My Orders page | Pass | |
 | | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
+| Bag | | | | |
+| Click on delete and update buttons will delete or update item | Pass | |
+| Click on secure checkout takes user to checkout page | Pass | |
+| Checkout | | | | |
+| Checkout forms requires all valid data | Pass | |
+| Card details section only receives fake card number | Pass | |
+| Click on complete order triggers process animation | Pass | |
+| Click on complete order which then processes the order via stripe | Pass | |
+
 
 
 ## User Story Testing
@@ -153,7 +164,7 @@ Defensive programming was manually tested with the below user acceptance testing
 * There was an extra excess white space to the right of the screen, to fix this I placed a p-0 so there was no padding on the row the image was on.
 ![Bug](docs/images/white-space-bug.png)
 
-* After migrating changes to the database, this error occured, to fix this I deleted the database and created a new one by deleting all mirations and pycache files within the migratations folder. I also reset the database on ElephantSQL.
+* After migrating changes to the database, this error occurred, to fix this I deleted the database and created a new one by deleting all migrations and pycache files within the migrations folder. I also reset the database on ElephantSQL.
 ![Bug](docs/images/database-error.png)
 
 * On the login and sign up pages, when the user inputted invalid data, the error message would appear and push the html elements down and under under the footer. This was becuase the space within the header and footer had a height of 60vh, this was forcing the height of the page so that the elements could not shift down without going underneath the footer.
@@ -172,6 +183,11 @@ Defensive programming was manually tested with the below user acceptance testing
 
 - The homepage vertical line and image gets longer when the height of the device increases, while growing at different speeds leaving them to not be aligned. To fix this I gave the vertical line and image a min and max height so that when the device increases in height, the image and line stays the same length and does not increase.
 
+- In the product page, the number of comments was displaying the number of comments for all products. I wanted to change the number so it displayed the number of comments for that product so I added the code below.
+
+Python -  ```
+{{ product.comments.all | length }}```
+
 
 ### GitHub **Issues**
 
@@ -185,7 +201,3 @@ Alternatively, use this link: https://github.com/Ewicks/Ivory/issues
 - Here the two elements side by side of the title Ivory are not centered like the title ivory is. I tried aligning the items center using flexbox.
 
 ![Bug](docs/images/unfixed-bug-header.png)
-
-- The toast notification does not update image but updates the title when adding item of clothing to basket.
-
-- Number of comments will be the same for all products 

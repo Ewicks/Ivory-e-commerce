@@ -80,9 +80,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    num_comments = Comment.objects.all()
     comments = product.comments
-    print(comments)
     comment_form = CommentForm(data=request.POST)
     if comment_form.is_valid():
         comment_form.instance.email = request.user.email

@@ -111,7 +111,7 @@
                 </form>
                 {% endif %}
                 
-                <h3>{{ num_comments|length }} Comments</h3>
+                <h3>{{ product.comments.all|length }} Comments</h3>
 
                 {% for comment in product.comments.all %}
                     <bold>
