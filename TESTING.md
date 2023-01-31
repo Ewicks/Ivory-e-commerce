@@ -2,8 +2,10 @@
 
 Return back to the [README.md](README.md) file.
 
-### HTML
 
+## Code Validation
+
+### HTML
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
@@ -50,13 +52,15 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Screenshot | Notes |
 | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browser-brave.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera.png) | Minor differences |
-| Internet Explorer | ![screenshot](documentation/browser-iex.png) | Does not work as expected |
+| Chrome | ![screenshot](docs/images/home-page.png) | Works as expected |
+| Chrome | ![screenshot](docs/images/checkout-success-page.png) | Works as expected |
+| Chrome | ![screenshot](docs/images/chrome-mobile-products.png) | Works as expected |
+| Safari | ![screenshot](docs/images/safari-product.png) | Minor CSS differences |
+| Safari | ![screenshot](docs/images/safari-contact.png) | Works as expected |
+| Safari | ![screenshot](docs/images/safair-home.png) | Minor differences |
+| Firefox | ![screenshot](docs/images/firefox-products.png) | Does not work as expected |
+| Firefox | ![screenshot](docs/images/safari-contact.png) | Does not work as expected |
+| Firefox | ![screenshot](docs/images/safair-home.png) | Does not work as expected |
 | x | x | repeat for any other tested browsers |
 
 
@@ -156,6 +160,8 @@ Defensive programming was manually tested with the below user acceptance testing
 - When the user is in mobile mode, the allauth pages content files half the page. To change this I added "col-12 col-md-6" to the column. This ensures that the contents take up half the page on medium devices and up and mobile devices and below the contents take up the whole page. 
 ![Bug](docs/images/mobile-allauth-bug.png)
 
+- The homepage vertical line and image gets longer when the height of the device increases, while growing at different speeds leaving them to not be aligned. To fix this I gave the vertical line and image a min and max height so that when the device increases in height, the image and line stays the same length and does not increase.
+
 
 ### GitHub **Issues**
 
@@ -170,9 +176,6 @@ Alternatively, use this link: https://github.com/Ewicks/Ivory/issues
 
 ![Bug](docs/images/unfixed-bug-header.png)
 
-
 - The toast notification does not update image but updates the title when adding item of clothing to basket.
-
-- The homepage vertical line goes further down when the height of the devices increases.
 
 - Number of comments will be the same for all products 
