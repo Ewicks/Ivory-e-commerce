@@ -26,6 +26,7 @@ def index(request):
                     [cust_email]
                 )
             form.save()
+            messages.success(request, 'You have subscribed to our newsletter with email confirmation')  # noqa
 
             return redirect('home')
 

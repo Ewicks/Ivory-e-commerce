@@ -24,20 +24,6 @@ To make a fake payment use the below credit card details.
 To visit the deployed website click [here](https://ivory-e-commerce.herokuapp.com/)
 
 
-# Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-- [UX](#ux-user-experience)
-- [Agile Development Process](#agile-development-process)
-- [Design](#design)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Credits](#credits)
-- [Acknowledgements](#acknowledgements)
-
-
 ## UX
 
 This website was designed to have an old fashioned, relic feel to it. The simplicity and use of colors were used to create this.
