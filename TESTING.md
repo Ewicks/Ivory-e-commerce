@@ -11,15 +11,15 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Findex.html) | ![screenshot](docs/images/html-validator-home.png) | Pass: No Errors |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-contact.png) | Pass: No Errors |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2F) | ![screenshot](docs/images/html-validator-home.png) | Pass: No Errors |
+| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fcontact) | ![screenshot](docs/images/html-validator-contact.png) | Pass: No Errors |
 | Bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fbag) | ![screenshot](docs/images/html-validator-bag.png) | Pass: No Errors |
-| Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-products.png) | Pass: No Errors |
-| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-checkout.png) | Pass: No Errors |
-| Latest Drops | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-latest-drops.png) | Pass: No Errors |
-| Product | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-product.png) | Pass: No Errors |
-| Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-login.png) | Pass: No Errors |
-| Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-signup.png) | Pass: No Errors |
+| Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fproducts) | ![screenshot](docs/images/html-validator-products.png) | Pass: No Errors |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fcheckout) | ![screenshot](docs/images/html-validator-checkout.png) | Pass: No Errors |
+| Latest Drops | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fproducts%2Flatest_drops) | ![screenshot](docs/images/html-validator-latest-drops.png) | Pass: No Errors |
+| Product | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fproducts%2F2%2F) | ![screenshot](docs/images/html-validator-product.png) | Pass: No Errors |
+| Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Faccounts%2Flogin) | ![screenshot](docs/images/html-validator-login.png) | Pass: No Errors |
+| Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Faccounts%2Fsignup) | ![screenshot](docs/images/html-validator-signup.png) | Pass: No Errors |
 
 
 ### CSS
