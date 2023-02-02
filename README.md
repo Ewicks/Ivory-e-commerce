@@ -189,8 +189,6 @@ Frameworks, Libraries & Programs Used
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-Consider adding a basic screenshot of your Projects Board.
-
 ![screenshot](docs/images/projects-board.png)
 
 ### GitHub Issues
@@ -199,8 +197,6 @@ Consider adding a basic screenshot of your Projects Board.
 There, I used my own **User Story Template** to manage user stories.
 
 It also helped with milestone iterations on a weekly basis.
-
-Consider adding a screenshot of your Open and Closed Issues.
 
 ![Screenshot](docs/images/github-issues.png)
 
@@ -336,64 +332,64 @@ Make sure you're on the **AWS Management Console** page.
 #### S3 Bucket
 
 <details>
-    <summary><b>S3 Bucket</b></summary>
-      - Search for **S3**.
+<summary><b>S3 Bucket</b></summary>
+    - Search for **S3**.
 - Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
 - Uncheck **Block all public access**, and acknowledge that the bucket will be public (required for it to work on Heroku).
 - From **Object Ownership**, make sure to have **ACLs enabled**, and **Bucket owner preferred** selected.
 - From the **Properties** tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click **Save**.
 - From the **Permissions** tab, paste in the following CORS configuration:
 
-	```shell
-	[
-		{
-			"AllowedHeaders": [
-				"Authorization"
-			],
-			"AllowedMethods": [
-				"GET"
-			],
-			"AllowedOrigins": [
-				"*"
-			],
-			"ExposeHeaders": []
-		}
-	]
-	```
+```shell
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+```
 
 - Copy your **ARN** string.
 - From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
-	- Policy Type: **S3 Bucket Policy**
-	- Effect: **Allow**
-	- Principal: `*`
-	- Actions: **GetObject**
-	- Amazon Resource Name (ARN): **paste-your-ARN-here**
-	- Click **Add Statement**
-	- Click **Generate Policy**
-	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
+- Policy Type: **S3 Bucket Policy**
+- Effect: **Allow**
+- Principal: `*`
+- Actions: **GetObject**
+- Amazon Resource Name (ARN): **paste-your-ARN-here**
+- Click **Add Statement**
+- Click **Generate Policy**
+- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
 
-		```shell
-		{
-			"Id": "Policy1234567890",
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Sid": "Stmt1234567890",
-					"Action": [
-						"s3:GetObject"
-					],
-					"Effect": "Allow",
-					"Resource": "arn:aws:s3:::your-bucket-name/*"
-					"Principal": "*",
-				}
-			]
-		}
-		```
+```shell
+{
+    "Id": "Policy1234567890",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1234567890",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::your-bucket-name/*"
+            "Principal": "*",
+        }
+    ]
+}
+```
 
-	- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
-	- Click **Save**.
+- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+- Click **Save**.
 - From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
-	- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
+- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
 
 #### IAM
 
@@ -401,30 +397,30 @@ Back on the AWS Services Menu, search for and open **IAM** (Identity and Access 
 Once on the IAM page, follow these steps:
 
 - From **User Groups**, click **Create New Group**.
-	- Suggested Name: `group-ivory` (group + the project name)
+- Suggested Name: `group-ivory` (group + the project name)
 - Tags are optional, but you must click it to get to the **review policy** page.
 - From **User Groups**, select your newly created group, and go to the **Permissions** tab.
 - Open the **Add Permissions** dropdown, and click **Attach Policies**.
 - Select the policy, then click **Add Permissions** at the bottom when finished.
 - From the **JSON** tab, select the **Import Managed Policy** link.
-	- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
-	- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
+- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
 
-		```shell
-		{
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Effect": "Allow",
-					"Action": "s3:*",
-					"Resource": [
-						"arn:aws:s3:::your-bucket-name",
-						"arn:aws:s3:::your-bucket-name/*"
-					]
-				}
-			]
-		}
-		```
+    ```shell
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": "s3:*",
+                "Resource": [
+                    "arn:aws:s3:::your-bucket-name",
+                    "arn:aws:s3:::your-bucket-name/*"
+                ]
+            }
+        ]
+    }
+    ```
 	
 	- Click **Review Policy**.
 	- Suggested Name: `policy-ivory` (policy + the project name)
@@ -460,30 +456,30 @@ Once on the IAM page, follow these steps:
 
 ### Stripe API
 <details>
-    <summary><b>Stripe API</b></summary>
-      This project uses [Stripe](https://stripe.com) to handle the ecommerce payments. Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
+<summary><b>Stripe API</b></summary>
+    This project uses Stripe to handle the ecommerce payments. Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
 
-      - From your Stripe dashboard, click to expand the "Get your test API keys".
-      - You'll have two keys here:
-         - `STRIPE_PUBLIC_KEY` = Publishable Key (starts with **pk**)
-         - `STRIPE_SECRET_KEY` = Secret Key (starts with **sk**)
+    - From your Stripe dashboard, click to expand the "Get your test API keys".
+    - You'll have two keys here:
+        - `STRIPE_PUBLIC_KEY` = Publishable Key (starts with **pk**)
+        - `STRIPE_SECRET_KEY` = Secret Key (starts with **sk**)
 
-      As a backup, in case users prematurely close the purchase-order page during payment, we can include Stripe Webhooks.
+    As a backup, in case users prematurely close the purchase-order page during payment, we can include Stripe Webhooks.
 
-      - From your Stripe dashboard, click **Developers**, and select **Webhooks**.
-      - From there, click **Add Endpoint**.
-         - `https://ivory-e-commerce.herokuapp.com/checkout/wh/`
-      - Click **receive all events**.
-      - Click **Add Endpoint** to complete the process.
-      - You'll have a new key here:
-         - `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with **wh**)
+    - From your Stripe dashboard, click **Developers**, and select **Webhooks**.
+    - From there, click **Add Endpoint**.
+        - `https://ivory-e-commerce.herokuapp.com/checkout/wh/`
+    - Click **receive all events**.
+    - Click **Add Endpoint** to complete the process.
+    - You'll have a new key here:
+        - `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with **wh**)
 </details><br>
 
 ### Gmail API
 
 <details>
     <summary><b>Gmail API</b></summary>
-      This project uses [Gmail](https://mail.google.com) to handle sending emails to users for account verification and purchase order confirmations.
+      This project uses Gmail to handle sending emails to users for account verification and purchase order confirmations.
 
       Once you've created a Gmail (Google) account and logged-in, follow these series of steps to get your project connected.
 
@@ -510,7 +506,7 @@ Once on the IAM page, follow these steps:
 
 <details>
     <summary><b>Heroku Deployment</b></summary>
-      This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+      This project uses Heroku, a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
 
@@ -607,39 +603,34 @@ If you'd like to backup your database models, use the following command for each
 
 ### Cloning
 
-<details>
-    <summary><b>Cloning</b></summary>
-      You can clone the repository by following these steps:
+You can clone the repository by following these steps:
 
-      1. Go to the [GitHub repository](https://github.com/Ewicks/Ivory) 
-      2. Locate the Code button above the list of files and click it 
-      3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
-      4. Open Git Bash or Terminal
-      5. Change the current working directory to the one where you want the cloned directory
-      6. In your IDE Terminal, type the following command to clone my repository:
-         - `git clone https://github.com/Ewicks/Ivory.git`
-      7. Press Enter to create your local clone.
+1. Go to the [GitHub repository](https://github.com/Ewicks/Ivory) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+    - `git clone https://github.com/Ewicks/Ivory.git`
+7. Press Enter to create your local clone.
 
-      Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-      [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Ewicks/Ivory)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Ewicks/Ivory)
 
-      Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
-      A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
-</details>
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
 <br>
 
 ### Forking 
 
-<details>
-    <summary><b>Forking</b></summary>
-      By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
-      You can fork this repository by using the following steps:
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
 
-      1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Ewicks/Ivory)
-      2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-      3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
-</details>
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Ewicks/Ivory)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 
 ## Credits

@@ -30,13 +30,11 @@
         
         </div>
         <div class="col-12 col-md-8 order-1 order-md-2 p-0">
-            <div class="d-flex">
-                <img src="{% static 'images/home-img.png' %}" id="home-img-size" alt="home-page">
-            </div>
+            <img src="{% static 'images/home-img.png' %}" id="home-img-size" alt="home-page">
         </div>
         <div class="vertical"></div>
     </div>
-    <form class="m-5 text-center" action="" method="POST">
+    <form class="m-5 text-center" action="{% url 'home' %}" method="POST">
         {% csrf_token %}
         <h2>Sign Up for weekly newsletter</h2>
         {{ form.as_p }}

@@ -115,24 +115,22 @@
                 <h3>{{ product.comments.all|length }} Comments</h3>
 
                 {% for comment in product.comments.all %}
-                    <bold>
-                            <!-- COMMENT DISPLAYED - START -->
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="media-heading">{{ comment.name }}</h4>
-                                <p>{{ comment.body }}</p>
-                                <ul class="list-unstyled list-inline media-detail pull-left">
-                                    <li><i class="fa fa-calendar m-1"></i>{{ comment.date_added }}</li>
-                                    {% if request.user.is_superuser %}
-                                        <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
-                                    {% endif %}
+                    <!-- COMMENT DISPLAYED - START -->
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">{{ comment.name }}</h4>
+                        <p>{{ comment.body }}</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar m-1"></i>{{ comment.date_added }}</li>
+                            {% if request.user.is_superuser %}
+                                <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                            {% endif %}
 
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- COMMENT DISPLAYED - END -->
-                        <br>
-                    </bold>
+                        </ul>
+                    </div>
+                </div>
+                <!-- COMMENT DISPLAYED - END -->
+                <br>
                 {% endfor %}
             </div>
         </div>

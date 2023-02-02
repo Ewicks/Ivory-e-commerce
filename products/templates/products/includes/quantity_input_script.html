@@ -2,14 +2,9 @@
 
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
-        var currentV = parseInt($(`#id_qty_${itemId}`).val());
-        var minusDisabled = currentV < 2;
-        var plusDisabled = currentV > 98;
-        // var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-        // var minusDisabled = currentValue < 2;
-        // var plusDisabled = currentValue > 98;
-        console.log('id: ', itemId);
-        console.log('currentVal: ', currentV);
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 98;
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
@@ -32,7 +27,6 @@
        e.preventDefault();
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        var currentValue = parseInt($(closestInput).val());
-       console.log(closestInput, currentValue)
        $(closestInput).val(currentValue + 1);
        console.log($(closestInput).val())
        var itemId = $(this).data('item_id');

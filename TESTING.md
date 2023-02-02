@@ -13,7 +13,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Findex.html) | ![screenshot](docs/images/html-validator-home.png) | Pass: No Errors |
 | Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-contact.png) | Pass: No Errors |
-| Bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-bag.png) | Pass: No Errors |
+| Bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fivory-e-commerce.herokuapp.com%2Fbag) | ![screenshot](docs/images/html-validator-bag.png) | Pass: No Errors |
 | Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-products.png) | Pass: No Errors |
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-checkout.png) | Pass: No Errors |
 | Latest Drops | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEwicks.github.io%2Fivory%2Fcontact.html) | ![screenshot](docs/images/html-validator-latest-drops.png) | Pass: No Errors |
