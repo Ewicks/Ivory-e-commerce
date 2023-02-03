@@ -155,8 +155,9 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I should be able to be able to view all items that will be purchased before I proceed to checkout. | [link](https://github.com/Ewicks/Ivory/issues/10) |
 | As a Site User I want to be able to register an account. | [link](https://github.com/Ewicks/Ivory/issues/8) |
 | As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access | [link](https://github.com/Ewicks/Ivory/issues/4) |
-| As a Administrator I want to be able to view newsletter signups in the admin panel. | [link](https://github.com/Ewicks/Ivory/issues/6) |
 | As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have.. | [link](https://github.com/Ewicks/Ivory/issues/7) |
+|  As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section  | [link](https://github.com/Ewicks/Ivory/issues/14) |
+
 
 ## Bugs
 

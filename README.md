@@ -50,9 +50,9 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access. [#4](https://github.com/Ewicks/Ivory/issues/4)
 
-- As a Administrator I want to be able to view newsletter signups in the admin panel. [#6](https://github.com/Ewicks/Ivory/issues/6)
-
 - As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have. [#7](https://github.com/Ewicks/Ivory/issues/7)
+
+- As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section [#14](https://github.com/Ewicks/Ivory/issues/14)
 
 ### Site User
 
