@@ -143,20 +143,20 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-| User Story | Link |
-| --- | --- |
-| As a new site user, I would like to access the site on differing devices, so that I can interact with content on my preferred device. | [link](https://github.com/Ewicks/Ivory/issues/1) |
-| As a new site user, I would like to press the back button if I get a 404 error page, so that I can easily go back to the website. | [link](https://github.com/Ewicks/Ivory/issues/3) |
-| As a new site user, I would like to view my recent orders, so that I can quickly check all the items that was ordered were the correct ones. | [link](https://github.com/Ewicks/Ivory/issues/5) |
-| As a returning site user, I would like to be able to register for a newsletter. | [link](https://github.com/Ewicks/Ivory/issues/11) |
-| As a returning site user, I would like to view the product up close, so that I can make an informed decision to purchase. | [link](https://github.com/Ewicks/Ivory/issues/13) |
-| As a returning site user, I would like to search for products by entering descriptive words, so that I can find what I want quickly. | [link](https://github.com/Ewicks/Ivory/issues/12) |
-| As a returning site user, I should be able to update my card details on my account and also view the saved card details. | [link](https://github.com/Ewicks/Ivory/issues/9) |
-| As a returning site user, I should be able to be able to view all items that will be purchased before I proceed to checkout. | [link](https://github.com/Ewicks/Ivory/issues/10) |
-| As a Site User I want to be able to register an account. | [link](https://github.com/Ewicks/Ivory/issues/8) |
-| As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access | [link](https://github.com/Ewicks/Ivory/issues/4) |
-| As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have.. | [link](https://github.com/Ewicks/Ivory/issues/7) |
-|  As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section  | [link](https://github.com/Ewicks/Ivory/issues/14) |
+| User Story | Link | Screenshot |
+| --- | --- | --- |
+| As a new site user, I would like to access the site on differing devices, so that I can interact with content on my preferred device. | [link](https://github.com/Ewicks/Ivory/issues/1) | ![Screenshot](docs/images/userstory-1.png) |
+| As a new site user, I would like to press the back button if I get a 404 error page, so that I can easily go back to the website. | [link](https://github.com/Ewicks/Ivory/issues/3) | ![Screenshot](docs/images/userstory-3.png) |
+| As a new site user, I would like to view my recent orders, so that I can quickly check all the items that was ordered were the correct ones. | [link](https://github.com/Ewicks/Ivory/issues/5) | ![Screenshot](docs/images/userstory-5.png) |
+| As a returning site user, I would like to be able to register for a newsletter. | [link](https://github.com/Ewicks/Ivory/issues/11) | ![Screenshot](docs/images/userstory-11.png) |
+| As a returning site user, I would like to view the product up close, so that I can make an informed decision to purchase. | [link](https://github.com/Ewicks/Ivory/issues/13) | ![Screenshot](docs/images/user-story-13.png) |
+| As a returning site user, I would like to search for products by entering descriptive words, so that I can find what I want quickly. | [link](https://github.com/Ewicks/Ivory/issues/12) | ![Screenshot](docs/images/userstory-12.png) |
+| As a returning site user, I should be able to update my card details on my account and also view the saved card details. | [link](https://github.com/Ewicks/Ivory/issues/9) | ![Screenshot](docs/images/user-story-9.png) |
+| As a returning site user, I should be able to be able to view all items that will be purchased before I proceed to checkout. | [link](https://github.com/Ewicks/Ivory/issues/10) | ![Screenshot](docs/images/user-story-10.png) |
+| As a Site User I want to be able to register an account. | [link](https://github.com/Ewicks/Ivory/issues/8) | ![Screenshot](docs/images/userstory-8.png) |
+| As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access | [link](https://github.com/Ewicks/Ivory/issues/4) | ![Screenshot](docs/images/userstory-4.png) |
+| As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have.. | [link](https://github.com/Ewicks/Ivory/issues/7) | ![Screenshot](docs/images/userstory-7.png) |
+|  As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section  | [link](https://github.com/Ewicks/Ivory/issues/14) | ![Screenshot](docs/images/userstory-14.png) |
 
 
 ## Bugs
