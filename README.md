@@ -52,7 +52,9 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 
 - As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have. [#7](https://github.com/Ewicks/Ivory/issues/7)
 
-- As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section [#14](https://github.com/Ewicks/Ivory/issues/14)
+- As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section.[#14](https://github.com/Ewicks/Ivory/issues/14)
+
+- As a Superuser I can edit how many items are in stock so that the store does not sell more items than we have in stock. [#16](https://github.com/Ewicks/Ivory/issues/16)
 
 ### Site User
 
@@ -73,6 +75,14 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 - As a Site User I want to be able to view all items that will be purchased before I proceed to checkout. [#10](https://github.com/Ewicks/Ivory/issues/10)
 
 - As a Site User I want to be able to register an account. [#8](https://github.com/Ewicks/Ivory/issues/8)
+
+- As a site user I can send a message to the store so that I can get answers to any questions. [#15](https://github.com/Ewicks/Ivory/issues/15)
+
+- As a site user I can add a product to a wish list so that I can go back to the item quickly in the future. [#17](https://github.com/Ewicks/Ivory/issues/17)
+
+- As a site user I can see dimensions of all clothing on each product so that I know what size to buy. [#18](https://github.com/Ewicks/Ivory/issues/18)
+
+- As a site user I can view each product from different angles so that I know what each product looks like from the back side and front. [#19](https://github.com/Ewicks/Ivory/issues/19)
 
 ## Wireframes 
 
