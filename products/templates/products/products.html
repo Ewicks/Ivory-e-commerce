@@ -55,7 +55,7 @@
     <div class="row products-border m-2">
         <div class="product-container pt-3 col-12">
             <div class="row">
-                {% for product in all_products %}
+                {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
                         <div class="card h-100 border-0">
                             {% if product.image %}
@@ -105,7 +105,7 @@
     </div>
 </div>
 
-{% if all_products %}
+{% if products %}
 <p class="text-center">
     Page {{ all_products.number }} of {{ all_products.paginator.num_pages }}
 </p>
