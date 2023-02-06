@@ -32,7 +32,12 @@ class Product(models.Model):
     latest_drop_page = models.BooleanField(
         default=False, null=True, blank=True)
     date_added = models.DateField(default=timezone.now)
-    stock_number = models.IntegerField(null=True, blank=True, default=0)
+    total_stock = models.IntegerField(null=True, blank=True, default=0)
+    xs_stock = models.IntegerField(null=True, blank=True, default=0)
+    s_stock = models.IntegerField(null=True, blank=True, default=0)
+    m_stock = models.IntegerField(null=True, blank=True, default=0)
+    l_stock = models.IntegerField(null=True, blank=True, default=0)
+    xl_stock = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.name

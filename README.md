@@ -154,7 +154,6 @@ I used the Roboto font, via fonts.google.com, becuase it had a basic feel to it 
 ### Future Features
 
 - Make the stripe payments real instead of fake
-- Add a reviews section where users can comment on clothing
 
 ## Technologies Used
 
@@ -649,7 +648,7 @@ You can fork this repository by using the following steps:
 
 - I got the homepage image from https://www.andsons.co.uk/products/sons-sunday-shirt-dark-tan?variant=32897066631273&gclid=CjwKCAiAleOeBhBdEiwAfgmXfxB34ANKIdh2IZx1NYUuheEr1rHMO63gojIL-EShmfqD-TFyQeJb5xoCtjoQAvD_BwE.
 
-- I used this youtube to help build the comment section. https://www.youtube.com/watch?v=OuOB9ADT_bo
+- I used this youtube to help build the review section. https://www.youtube.com/watch?v=OuOB9ADT_bo
 
 ## Content
 - [Markdown Builder by Tim Nelson](https://traveltimn.github.io/readme-builder) | README and TESTING | tool to help generate the Markdown files 

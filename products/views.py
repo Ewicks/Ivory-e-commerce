@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.exclude(stock_number=0)
+    products = Product.objects.exclude(total_stock=0)
     query = None
     categories = None
     sort = None

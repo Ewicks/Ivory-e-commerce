@@ -189,10 +189,10 @@ Defensive programming was manually tested with the below user acceptance testing
 
 - The homepage vertical line and image gets longer when the height of the device increases, while growing at different speeds leaving them to not be aligned. To fix this I gave the vertical line and image a min and max height so that when the device increases in height, the image and line stays the same length and does not increase.
 
-- In the product page, the number of comments was displaying the number of comments for all products. I wanted to change the number so it displayed the number of comments for that product so I added the code below.
+- In the product page, the number of reviews was displaying the number of reviews for all products. I wanted to change the number so it displayed the number of reviews for that product so I added the code below.
 
 Python -  ```
-{{ product.comments.all | length }}```
+{{ product.reviews.all | length }}```
 
 
 ### GitHub **Issues**
