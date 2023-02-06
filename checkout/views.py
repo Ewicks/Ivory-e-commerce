@@ -145,9 +145,6 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
-    
-
     # Save the user's info
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -179,9 +176,16 @@ def checkout_success(request, order_number):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for item in bag.items():
-        
-
+    for item_id, item_data in bag.items():
+        if isinstance(item_data, int):
+            product = get_object_or_404(Product, pk=item_id)
+            product.stock_number -= quantity
+            product.save()
+        else:
+            product = get_object_or_404(Product, pk=item_id)
+            for size, quantity in item_data['items_by_size'].items():
+                product.stock_number -= quantity
+                product.save()
 
     if 'bag' in request.session:
         del request.session['bag']
