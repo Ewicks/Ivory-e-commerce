@@ -801,11 +801,11 @@ label[data-state="close"] input {
 	display:block;
 }
 
-#comments form {
+#reviews form {
 	margin-bottom:30px;
 }
 
-#comments .btn {
+#reviews .btn {
 	margin: 0px;
     padding: 5px 0px;
     align-items: center;
@@ -821,68 +821,68 @@ label {
     flex-wrap: wrap;
 }
 
-.comment-btn:hover {
+.review-btn:hover {
     background: black;
     color: #fff !important;
 }
 
-#comments form fieldset {
+#reviews form fieldset {
 	clear:both;
 }
 
-#comments form textarea {
+#reviews form textarea {
 	height:100px;
 }
 
-#comments .media {
+#reviews .media {
 	border-top:1px dashed #DDDDDD;
 	padding:20px 0;
 	margin:0;
 }
 
-#comments .media > .pull-left {
+#reviews .media > .pull-left {
     margin-right:20px;
 }
 
-#comments .media img {
+#reviews .media img {
 	max-width:100px;
 }
 
-#comments .media h4 {
+#reviews .media h4 {
 	margin:0 0 10px;
 }
 
-#comments .media h4 span {
+#reviews .media h4 span {
 	font-size:14px;
 	float:right;
 	color:#999999;
 }
 
-#comments .media p {
+#reviews .media p {
 	margin-bottom:15px;
 	text-align:justify;
 }
 
-#comments .media-detail {
+#reviews .media-detail {
 	margin:0;
 }
 
-#comments .media-detail li {
+#reviews .media-detail li {
 	color:#AAAAAA;
 	font-size:12px;
 	padding-right: 10px;
 	font-weight:600;
 }
 
-#comments .media-detail a:hover {
+#reviews .media-detail a:hover {
 	text-decoration:underline;
 }
 
-#comments .media-detail li:last-child {
+#reviews .media-detail li:last-child {
 	padding-right:0;
 }
 
-#comments .media-detail li i {
+#reviews .media-detail li i {
 	color:#666666;
 	font-size:15px;
 	margin-right:10px;

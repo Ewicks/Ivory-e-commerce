@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.core.paginator import Paginator
-from .models import Product, Category, Comment
-from .forms import ProductForm, CommentForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 from datetime import datetime, timedelta
 
 
@@ -79,21 +79,21 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    comments = product.comments
-    comment_form = CommentForm(data=request.POST)
-    if comment_form.is_valid():
-        comment_form.instance.email = request.user.email
-        comment_form.instance.name = request.user.username
-        comment = comment_form.save(commit=False)
-        comment.product = product
-        comment.save()
+    reviews = product.reviews
+    review_form = ReviewForm(data=request.POST)
+    if review_form.is_valid():
+        review_form.instance.email = request.user.email
+        review_form.instance.name = request.user.username
+        review = review_form.save(commit=False)
+        review.product = product
+        review.save()
     else:
-        comment_form = CommentForm()
+        review_form = ReviewForm()
 
     context = {
         'product': product,
-        "comments": comments,
-        "comment_form": comment_form,
+        "reviews": reviews,
+        "review_form": review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -172,8 +172,8 @@ def delete_product(request, product_id):
 
 
 @login_required
-def delete_comment(request, comment_id):
-    """ Delete comment from the front end """
-    comment = get_object_or_404(Comment, pk=comment_id)
-    comment.delete()
+def delete_review(request, review_id):
+    """ Delete review from the front end """
+    review = get_object_or_404(Review, pk=review_id)
+    review.delete()
     return redirect(reverse('products'))

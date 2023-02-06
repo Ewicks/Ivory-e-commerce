@@ -98,27 +98,27 @@
     	<div class="row">
             <div class="col-sm-8">   
                 {% if request.user.is_authenticated %}
-                <!-- Form to add comment -->
+                <!-- Form to add review -->
                 <form method="post" style="margin-top: 1.3em;">
-                	<h3 class="pull-left">New Comment</h3>
+                	<h3 class="pull-left">New Review</h3>
                     <fieldset>
                         <div class="wrap-form">
                             {% csrf_token %}
-                            {{ comment_form | crispy }}
+                            {{ review_form | crispy }}
                             <button type="submit"
-                                class="btn comment-btn border-dark bd-highlight text-black btn-clear">Submit</button>
+                                class="btn review-btn border-dark bd-highlight text-black btn-clear">Submit</button>
                         </div>  	
                     </fieldset>
                 </form>
                 {% endif %}
                 
-                <h3>{{ product.comments.all|length }} Comments</h3>
+                <h3>{{ product.reviews.all|length }} Reviews</h3>
 
-                {% for comment in product.comments.all %}
-                    <!-- COMMENT DISPLAYED - START -->
+                {% for review in product.reviews.all %}
+                    <!-- REVIEW DISPLAYED - START -->
                 <div class="media">
                     <div class="media-body">
-                        <h4 class="media-heading">{{ comment.name }}</h4>
+                        <h4 class="media-heading">{{ review.name }}</h4>
                         <div class="rate">
                             <input type="radio" id="star5" name="rate" value="5" />
                             <label for="star5" title="text">5 stars</label>
@@ -131,17 +131,18 @@
                             <input type="radio" id="star1" name="rate" value="1" />
                             <label for="star1" title="text">1 star</label>
                           </div>
-                        <p>{{ comment.body }}</p>
+                        <p>{{ review.body }}</p>
                         <ul class="list-unstyled list-inline media-detail pull-left">
-                            <li><i class="fa fa-calendar m-1"></i>{{ comment.date_added }}</li>
+                            <li><i class="fa fa-calendar m-1"></i>{{ review.rating }}</li><br>
+                            <li><i class="fa fa-calendar m-1"></i>{{ review.date_added }}</li>
                             {% if request.user.is_superuser %}
-                                <a class="text-danger" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                                <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
                             {% endif %}
 
                         </ul>
                     </div>
                 </div>
-                <!-- COMMENT DISPLAYED - END -->
+                <!-- REVIEW DISPLAYED - END -->
                 <br>
                 {% endfor %}
             </div>

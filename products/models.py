@@ -38,12 +38,14 @@ class Product(models.Model):
         return self.name
 
 
-class Comment(models.Model):
+class Review(models.Model):
     product = models.ForeignKey(
-        Product, related_name="comments", on_delete=models.CASCADE)
+        Product, related_name="reviews", on_delete=models.CASCADE)
     name = models.CharField(max_length=254)
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
         return '%s - %s' % (self.name, self.product.name)

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category, Comment
+from .models import Product, Category, Review
 from .widgets import CustomClearableFileInput
 
 
@@ -22,10 +22,10 @@ class ProductForm(forms.ModelForm):
             field.widget.attrs['class'] = 'border-black rounded-0'
 
 
-class CommentForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     """
-    Field to be displayed in the CommentForm
+    Field to be displayed in the ReviewForm
     """
     class Meta:
-        model = Comment
-        fields = ('body',)
+        model = Review
+        fields = ('body', 'rating')
