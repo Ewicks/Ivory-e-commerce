@@ -42,10 +42,10 @@
                         <p><strong>Size:</strong></p>
                         <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
                             <option value="xs">XS</option>
-                            <option value="s" class="out-of-stock">S</option>
+                            <option value="s">S</option>
                             <option value="m" selected>M</option>
                             <option value="l">L</option>
-                            <option value="xl" >XL</option>
+                            <option value="xl">XL</option>
                         </select>
                     </div>
                     <div class="col-12">
@@ -159,47 +159,43 @@
 {{ block.super }}
 <script>
     $(document).ready( function() {
-        $("select").on("change", function(target) {
-            if ($(this).find('option:selected').text() == "XS") {
+        if ($('select#id_product_size option[value="xs"]').text() == "XS") {
                 var xs_stock = "{{ product.xs_stock }}";
-                console.log(xs_stock)
-                if (s_stock == 0) {
-                    $(this).prop("disabled",true);
+                if (xs_stock == 0) {
+                    $(('select#id_product_size option[value="xs"]')).prop("disabled",true);
                 }
             }
-            if ($(this).find('option:selected').text() == "S") {
+
+        if ($('select#id_product_size option[value="s"]').text() == "S") {
                 var s_stock = "{{ product.s_stock }}";
-                console.log(s_stock)
                 if (s_stock == 0) {
-                    $(this).prop("disabled",true);
+                    $(('select#id_product_size option[value="s"]')).prop("disabled",true);
                 }
             }
-            if ($(this).find('option:selected').text() == "M") {
+
+        if ($('select#id_product_size option[value="m"]').text() == "M") {
                 var m_stock = "{{ product.m_stock }}";
-                console.log(m_stock)
                 if (m_stock == 0) {
-                    $(this).prop("disabled",true);
+                    $(('select#id_product_size option[value="m"]')).prop("disabled",true);
                 }
             }
-            if ($(this).find('option:selected').text() == "L") {
+
+        if ($('select#id_product_size option[value="l"]').text() == "L") {
                 var l_stock = "{{ product.l_stock }}";
-                console.log(l_stock)
                 if (l_stock == 0) {
-                    $(this).prop("disabled",true);
+                    $(('select#id_product_size option[value="l"]')).prop("disabled",true);
                 }
             }
-            if ($(this).find('option:selected').text() == "XL") {
+
+        if ($('select#id_product_size option[value="xl"]').text() == "XL") {
                 var xl_stock = "{{ product.xl_stock }}";
-                console.log(xl_stock)
                 if (xl_stock == 0) {
-                    $(this).prop("disabled",true);
+                    $(('select#id_product_size option[value="xl"]')).prop("disabled",true);
                 }
-            }
-            else {
-                $(this).prop("disabled",false);
             }
         })
-    });
+
+
 </script>
 
 {% include 'products/includes/quantity_input_script.html' %}
