@@ -31,11 +31,6 @@ html {
     height: 100%;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 /* PRELOADER */
 #preloader {
     position: fixed;
@@ -531,6 +526,14 @@ label[data-state="close"] input {
 }
 
 /* Product Form */
+
+
+.input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
 
 .btn-file {
     position: relative;

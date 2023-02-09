@@ -43,7 +43,7 @@
                         <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
                             <option value="xs">XS</option>
                             <option value="s">S</option>
-                            <option value="m" selected>M</option>
+                            <option value="m" >M</option>
                             <option value="l">L</option>
                             <option value="xl">XL</option>
                         </select>
@@ -90,7 +90,11 @@
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                        {% if product.total_stock > 0 %}
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                        {% else %}
+                            <input disabled type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                        {% endif %}
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
@@ -159,42 +163,31 @@
 {{ block.super }}
 <script>
     $(document).ready( function() {
-        if ($('select#id_product_size option[value="xs"]').text() == "XS") {
-                var xs_stock = "{{ product.xs_stock }}";
-                if (xs_stock == 0) {
-                    $(('select#id_product_size option[value="xs"]')).prop("disabled",true);
-                }
-            }
+        var xs_stock = "{{ product.xs_stock }}";
+        if (xs_stock == 0) {
+            $(('select#id_product_size option[value="xs"]')).prop("disabled",true);
+        }
 
-        if ($('select#id_product_size option[value="s"]').text() == "S") {
-                var s_stock = "{{ product.s_stock }}";
-                if (s_stock == 0) {
-                    $(('select#id_product_size option[value="s"]')).prop("disabled",true);
-                }
-            }
+        var s_stock = "{{ product.s_stock }}";
+        if (s_stock == 0) {
+            $(('select#id_product_size option[value="s"]')).prop("disabled",true);
+        }
 
-        if ($('select#id_product_size option[value="m"]').text() == "M") {
-                var m_stock = "{{ product.m_stock }}";
-                if (m_stock == 0) {
-                    $(('select#id_product_size option[value="m"]')).prop("disabled",true);
-                }
-            }
+        var m_stock = "{{ product.m_stock }}";
+        if (m_stock == 0) {
+            $(('select#id_product_size option[value="m"]')).prop("disabled",true);
+        }
 
-        if ($('select#id_product_size option[value="l"]').text() == "L") {
-                var l_stock = "{{ product.l_stock }}";
-                if (l_stock == 0) {
-                    $(('select#id_product_size option[value="l"]')).prop("disabled",true);
-                }
-            }
+        var l_stock = "{{ product.l_stock }}";
+        if (l_stock == 0) {
+            $(('select#id_product_size option[value="l"]')).prop("disabled",true);
+        }
 
-        if ($('select#id_product_size option[value="xl"]').text() == "XL") {
-                var xl_stock = "{{ product.xl_stock }}";
-                if (xl_stock == 0) {
-                    $(('select#id_product_size option[value="xl"]')).prop("disabled",true);
+        var xl_stock = "{{ product.xl_stock }}";
+        if (xl_stock == 0) {
+            $(('select#id_product_size option[value="xl"]')).prop("disabled",true);
                 }
-            }
         })
-
 
 </script>
 

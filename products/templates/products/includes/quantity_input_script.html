@@ -1,6 +1,6 @@
 <script>
 
-    // Disable +- buttons when outside 1-99
+    // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
@@ -9,36 +9,38 @@
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
-    // Makes sure enabling/disabling on page load
+    // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
         var itemId = $(allQtyInputs[i]).data('item_id');
         handleEnableDisable(itemId);
     }
 
-    // Every time input is changed, check if it should enable or disable buttons
+    // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
         handleEnableDisable(itemId);
     });
 
-    // Increment Quantity (from Boutique Ado walkthrough)
+    // Increment quantity
     $('.increment-qty').click(function(e) {
-        e.preventDefault();
-        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-        var currentValue = parseInt($(closestInput).val());
-        $(closestInput).val(currentValue + 1);
-        var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId);
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       console.log(closestInput)
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue + 1);
+       var itemId = $(this).data('item_id');
+       console.log(itemId)
+       handleEnableDisable(itemId);
     });
 
-    // Decrement Quantity (from Boutique Ado walkthrough)
+    // Decrement quantity
     $('.decrement-qty').click(function(e) {
-        e.preventDefault();
-        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-        var currentValue = parseInt($(closestInput).val());
-        $(closestInput).val(currentValue - 1);
-        var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId);
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue - 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
     });
 </script>
