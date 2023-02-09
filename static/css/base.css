@@ -532,6 +532,14 @@ label[data-state="close"] input {
 
 /* Product Form */
 
+.out-of-stock {
+    background-color: #d20c0c !important;
+}
+
+/* select, select option[value="s"] {
+    background-color: #000 !important;
+} */
+
 .btn-file {
     position: relative;
     overflow: hidden;
