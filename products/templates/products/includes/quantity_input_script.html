@@ -12,16 +12,14 @@
         const plusDisabled = currentValue > 98;
         // Disable plus button when the selected size has run out of stock
         $(document).ready( function() {
-            // $('select#id_product_size option:selected').change(function() {})
             var stock_size = $('select#id_product_size option:selected').val();
-            console.log(stock_size)
             if (stock_size == 'xs') {
                 stock_val = "{{ product.xs_stock }}";
             } else if (stock_size == 's') {
                 stock_val = "{{ product.s_stock }}";
-            }else if (stock_size == 'm') {
+            } else if (stock_size == 'm') {
                 stock_val = "{{ product.m_stock }}";
-            }else if (stock_size == 'l') {
+            } else if (stock_size == 'l') {
                 stock_val = "{{ product.l_stock }}";
             } else {
                 stock_val = "{{ product.xl_stock }}";
@@ -33,7 +31,7 @@
                 $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabledStock);
             } else {
                 $(`.increment-qty_${itemId}`).prop('disabled', plusDisabledStock);
-            }
+            }           
         });
 
         if (size) {
@@ -56,7 +54,9 @@
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
+        console.log(itemId)
         var size = $(this).data('size');
+        console.log(size)
         handleEnableDisable(itemId, size);
     });
 
