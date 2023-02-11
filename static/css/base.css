@@ -307,6 +307,17 @@ fieldset {
 
 /* Products Page */
 
+
+/* Removes input inner text button for Chrome and Safari */
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* Removes input inner text button for Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 .products-border {
     border: 2px solid black;
 }
