@@ -4,9 +4,20 @@
     </span>
     <span class="text-uppercase">Keep Shopping</span>
 </a>
+
+{% if total > 0.30 %}
 <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
     <span class="text-white text-uppercase">Secure Checkout</span>
     <span class="icon">
         <i class="fas fa-lock"></i>
     </span>
 </a>
+{% else %}
+<a href="{% url 'view_bag' %}" class="btn btn-black rounded-0 btn-lg">
+    <span class="text-white text-uppercase">Secure Checkout</span>
+    <span class="icon">
+        <i class="fas fa-lock"></i>
+    </span>
+</a>
+<p class="text-danger">Order most be over £30p</p>
+{% endif %}
