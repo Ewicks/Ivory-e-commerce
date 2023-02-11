@@ -194,6 +194,10 @@ Defensive programming was manually tested with the below user acceptance testing
 Python -  ```
 {{ product.reviews.all | length }}```
 
+- Stripe only allows users to checkout with a balance more than £0.30, so whenever the total of items was less an error message would come up explaining this and they would not be allowed to checkout.
+
+![Screenshot](docs/images/stripe-bug.png)
+
 
 ### GitHub **Issues**
 
