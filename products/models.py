@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -46,11 +47,11 @@ class Product(models.Model):
 class Review(models.Model):
     product = models.ForeignKey(
         Product, related_name="reviews", on_delete=models.CASCADE)
-    name = models.CharField(max_length=254)
+    user = models.ForeignKey(
+        User, related_name='reviews', on_delete=models.CASCADE)
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
+    stars = models.IntegerField()
 
     def __str__(self):
         return '%s - %s' % (self.name, self.product.name)
