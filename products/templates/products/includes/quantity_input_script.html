@@ -14,7 +14,6 @@
             var currentValue = parseInt($(`.id_qty_${itemId}`).val());
         }
         var minusDisabled = currentValue < 2;
-        const plusDisabled = currentValue > 98;
         // Disable plus button when the selected size has run out of stock
         $(document).ready( function() {
             var stock_size = $('select#id_product_size option:selected').val();
@@ -36,16 +35,13 @@
                 $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabledStock);
             } else {
                 $(`.increment-qty_${itemId}`).prop('disabled', plusDisabledStock);
-                $(`.increment-qty_${itemId}`).prop('disabled', plusDisabledStock);
             }           
         });
 
         if (size) {
             $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
-            $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabled);
         } else {
             $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-            $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
         }
     }
 

@@ -147,7 +147,7 @@
 
         // Change quntity button number to 0 every time a user changes the size
         $('select#id_product_size').change(function() {
-        $('.qty_input').val(1)
+        $('.qty_input').val(1);
         if (size) {
                 $(`.increment-size_${itemId}_${size}`).removeAttr("disabled");
             } else {
@@ -179,7 +179,7 @@
         if (xl_stock == 0) {
             $(('select#id_product_size option[value="xl"]')).prop("disabled",true);
                 }
-        })
+        });
 
 </script>
 
