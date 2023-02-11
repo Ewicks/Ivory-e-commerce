@@ -92,7 +92,7 @@
             </form>            
         </div>
     </div>
-    <div class="container content-item">   
+    <div class="container-fluid content-item">   
     	<div class="row">
             <div class="col-sm-8">   
                 {% if request.user.is_authenticated %}
@@ -117,18 +117,6 @@
                 <div class="media">
                     <div class="media-body">
                         <h4 class="media-heading">{{ review.name }}</h4>
-                        <div class="rate">
-                            <input type="radio" id="star5" name="rate" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                            <input type="radio" id="star4" name="rate" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                            <input type="radio" id="star3" name="rate" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                            <input type="radio" id="star2" name="rate" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                            <input type="radio" id="star1" name="rate" value="1" />
-                            <label for="star1" title="text">1 star</label>
-                          </div>
                         <p>{{ review.body }}</p>
                         <ul class="list-unstyled list-inline media-detail pull-left">
                             <li><i class="fa fa-calendar m-1"></i>{{ review.rating }}</li><br>
@@ -154,6 +142,12 @@
 {{ block.super }}
 <script>
     $(document).ready( function() {
+
+        /* Prevent user from entering invalid data in the quantity button using their keyboard */
+        $(".qty_input").keypress(function (evt) {
+            evt.preventDefault();
+        });
+
         var xs_stock = "{{ product.xs_stock }}";
         if (xs_stock == 0) {
             $(('select#id_product_size option[value="xs"]')).prop("disabled",true);
