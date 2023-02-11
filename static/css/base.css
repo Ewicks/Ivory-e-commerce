@@ -200,6 +200,11 @@ fieldset {
 
 /* Products Page */
 
+/* cursor for quantity input */
+
+.default {
+    cursor: default;
+}
 
 /* Removes input inner text button for Chrome and Safari */
 input[type="number"]::-webkit-inner-spin-button {
