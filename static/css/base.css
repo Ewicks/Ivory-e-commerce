@@ -355,6 +355,24 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
+.review-border {
+    border: 1px solid lightgray;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 #989a9b;
+    
+}
+
+.gold {
+    color: gold;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+
+
 
 
 /* ------------------------------- bootstrap toasts */

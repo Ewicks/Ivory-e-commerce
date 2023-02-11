@@ -101,14 +101,25 @@
                 <!-- Form to add review -->
                 <form method="post" style="margin-top: 1.3em;">
                 	<h3 class="pull-left">New Review</h3>
-                    <fieldset>
-                        <div class="wrap-form">
+                        <div class="wrap-form d-flex">
                             {% csrf_token %}
-                            {{ review_form | crispy }}
+                            <div class="d-flex">
+                                <label for="stars" class="m-0 px-1 my-auto">Stars</label>
+                                <i class="fa fa-star gold my-auto"></i>
+                            </div>
+                            
+                            <select class="form-select w-25" name="stars" id="stars" selected="3">
+                                <option value="1">1</option>
+                                <option value="2">2</i></option>
+                                <option value="3" selected >3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</i></option>
+                            </select>
+                            <label for="content" class="mt-3">Review</label>
+                            <textarea class="form-control mt-2 mb-3" name="body" id="body" cols="30" rows="5"></textarea>
                             <button type="submit"
-                                class="btn review-btn border-dark bd-highlight text-black btn-clear">Submit</button>
+                                class="btn review-btn border-dark bd-highlight text-black btn-clear w-20">Submit</button>
                         </div>  	
-                    </fieldset>
                 </form>
                 {% endif %}
                 
@@ -117,18 +128,18 @@
                 {% for review in product.reviews.all %}
                     <!-- REVIEW DISPLAYED - START -->
                 <div class="media">
-                    <div class="media-body">
-                        <h4 class="media-heading">{{ review.name }}</h4>
-                        <p>{{ review.body }}</p>
-                        <ul class="list-unstyled list-inline media-detail pull-left">
-                            <li><i class="fa fa-calendar m-1"></i>{{ review.rating }}</li><br>
-                            <li><i class="fa fa-calendar m-1"></i>{{ review.date_added }}</li>
-                            {% if request.user.is_superuser %}
-                                <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
-                            {% endif %}
-
-                        </ul>
+                    <div class="media-body review-border">
+                        <p><b>Username: </b> {{ user.username }}</p>
+                        <p>{{ review.stars }}<i class="fa-solid fa-star gold mx-1"></i></p>
+                        <hr>
+                        {{ review.body }} 
+                        <hr>
+                        <b>Date Added: </b> {{ review.date_added }}
+                        {% if request.user.is_superuser %}
+                            <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                        {% endif %}
                     </div>
+                    
                 </div>
                 <!-- REVIEW DISPLAYED - END -->
                 <br>
