@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <!-- Image, Price, Rating, Quantity, Size, Buttons -->
+        <!-- Image, Price, Quantity, Size, Buttons -->
         <div class="col-12 col-md-8 my-5">
             <a href="{{ product.image.url }}" target="_blank">
                 <img class="card-img-top img-height-detail img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -19,11 +19,6 @@
                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                 </a>
             </p>
-            {% endif %}
-            {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-            {% else %}
-                <small class="text-muted">No Rating</small>
             {% endif %}
             {% if user.is_superuser %}
                 <small class="ml-3">
