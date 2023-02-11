@@ -40,6 +40,7 @@
                     {% with product.has_sizes as s %}
                     {% if s %}
                         <div class="col-12">
+                            <!-- Size Button -->
                             <p><strong>Size:</strong></p>
                             <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
                                 <option value="xs">XS</option>
@@ -51,6 +52,7 @@
                         </div>
                     {% endif %}
                     <div class="col-12">
+                        <!-- Quantity button -->
                         <p class="mt-3"><strong>Quantity:</strong></p>
                         <div class="form-group w-50">
                             <div class="input-group input-group-{{ product.id }}">
@@ -143,9 +145,14 @@
 <script>
     $(document).ready( function() {
 
-        /* Prevent user from entering invalid data in the quantity button using their keyboard */
-        $(".qty_input").keypress(function (evt) {
-            evt.preventDefault();
+        // Change quntity button number to 0 every time a user changes the size
+        $('select#id_product_size').change(function() {
+        $('.qty_input').val(1)
+        if (size) {
+                $(`.increment-size_${itemId}_${size}`).removeAttr("disabled");
+            } else {
+                $(`.increment-qty_${itemId}`).removeAttr("disabled");
+            }
         });
 
         var xs_stock = "{{ product.xs_stock }}";

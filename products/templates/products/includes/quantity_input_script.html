@@ -1,6 +1,11 @@
 <script>
    /* jshint esversion: 11, jquery: true */
 
+   /* Prevent user from entering invalid data in the quantity button using their keyboard */
+   $(".qty_input").keypress(function (evt) {
+            evt.preventDefault();
+        });
+
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
         if (size) {
@@ -55,9 +60,7 @@
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
-        console.log(itemId)
         var size = $(this).data('size');
-        console.log(size)
         handleEnableDisable(itemId, size);
     });
 
