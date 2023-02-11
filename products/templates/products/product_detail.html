@@ -96,7 +96,7 @@
     </div>
     <div class="container-fluid content-item">   
     	<div class="row">
-            <div class="col-sm-8">   
+            <div class="col-sm-8 p-0">   
                 {% if request.user.is_authenticated %}
                 <!-- Form to add review -->
                 <form method="post" style="margin-top: 1.3em;">
@@ -115,10 +115,10 @@
                                 <option value="4">4</option>
                                 <option value="5">5</i></option>
                             </select>
-                            <label for="content" class="mt-3">Review</label>
+                            <label for="content" class="mt-3 p-0">Review</label>
                             <textarea class="form-control mt-2 mb-3" name="body" id="body" cols="30" rows="5"></textarea>
                             <button type="submit"
-                                class="btn review-btn border-dark bd-highlight text-black btn-clear w-20">Submit</button>
+                                class="btn review-btn border-dark bd-highlight text-black btn-clear mb-4 btn-width">Submit</button>
                         </div>  	
                 </form>
                 {% endif %}
