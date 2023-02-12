@@ -86,7 +86,24 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     {% endwith %}
                 </div>
-            </form>            
+            </form>    
+            {% if product.xs_stock > 5 or product.s_stock > 5 %}
+            <p id="in-stock" class="text-success fw-bold px-2 my-2">in stock</p>
+            <!-- <p id="in-stock" class=" fw-bold px-2 my-2"></p> -->
+            {% elif product.xs_stock > 0 %}
+                <p id="" class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.xs_stock }}</strong></p>
+            {% elif product.s_stock > 0 %}
+                <p class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.s_stock }}</strong></p>
+            {% elif product.m_stock > 0 %}
+                <p class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.m_stock }}</strong></p>
+            {% elif product.l_stock > 0 %}
+                <p class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.l_stock }}</strong></p>
+            {% elif product.xl_stock > 0 %}
+                <p class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.xl_stock }}</strong></p>
+            {% else %}
+                <p class="text-danger fw-bold px-2 my-2">Out Of Stock</p>
+            {% endif %}        
+
         </div>
     </div>
     <div class="container-fluid content-item">   
@@ -96,32 +113,33 @@
                 <!-- Form to add review -->
                 <form method="post" style="margin-top: 1.3em;">
                 	<h3 class="pull-left">New Review</h3>
-                        <div class="wrap-form d-flex">
-                            {% csrf_token %}
-                            <div class="d-flex">
-                                <label for="stars" class="m-0 px-1 my-auto">Stars</label>
-                                <i class="fa fa-star gold my-auto"></i>
-                            </div>
-                            
-                            <select class="form-select w-25" name="stars" id="stars" selected="3">
-                                <option value="1">1</option>
-                                <option value="2">2</i></option>
-                                <option value="3" selected >3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</i></option>
-                            </select>
-                            <label for="content" class="mt-3 p-0">Review</label>
-                            <textarea class="form-control mt-2 mb-3" name="body" id="body" cols="30" rows="5"></textarea>
-                            <button type="submit"
-                                class="btn review-btn border-dark bd-highlight text-black btn-clear mb-4 btn-width">Submit</button>
-                        </div>  	
+                    <div class="wrap-form d-flex">
+                        {% csrf_token %}
+                        <div class="d-flex">
+                            <label for="stars" class="m-0 px-1 my-auto">Stars</label>
+                            <i class="fa fa-star gold my-auto"></i>
+                        </div>
+                        
+                        <select class="form-select w-25" name="stars" id="stars" selected="3">
+                            <option value="1">1</option>
+                            <option value="2">2</i></option>
+                            <option value="3" selected >3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</i></option>
+                        </select>
+                        <label for="content" class="mt-3 p-0">Review</label>
+                        <textarea class="form-control mt-2 mb-3" name="body" id="body" cols="30" rows="5"></textarea>
+                        <button type="submit"
+                            class="btn review-btn border-dark bd-highlight text-black btn-clear mb-4 btn-width">Submit</button>
+                    </div>
+
                 </form>
                 {% endif %}
                 
                 <h3>{{ product.reviews.all|length }} Reviews</h3>
 
                 {% for review in product.reviews.all %}
-                    <!-- REVIEW DISPLAYED - START -->
+                <!-- REVIEW DISPLAYED - START -->
                 <div class="media">
                     <div class="media-body review-border">
                         <p><b>Username: </b> {{ user.username }}</p>
@@ -151,14 +169,15 @@
 <script>
     $(document).ready( function() {
 
+
         // Change quntity button number to 0 every time a user changes the size
         $('select#id_product_size').change(function() {
-        $('.qty_input').val(1);
-        if (size) {
-                $(`.increment-size_${itemId}_${size}`).removeAttr("disabled");
-            } else {
-                $(`.increment-qty_${itemId}`).removeAttr("disabled");
-            }
+            $('.qty_input').val(1);
+            if (size) {
+                    $(`.increment-size_${itemId}_${size}`).removeAttr("disabled");
+                } else {
+                    $(`.increment-qty_${itemId}`).removeAttr("disabled");
+                }
         });
 
         var xs_stock = "{{ product.xs_stock }}";
