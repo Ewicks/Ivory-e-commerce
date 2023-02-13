@@ -18,7 +18,7 @@ def all_products(request):
     sort = None
     direction = None
 
-    p = Paginator(Product.objects.all(), 8)
+    p = Paginator(products, 8)
     page = request.GET.get('page')
     all_products = p.get_page(page)
 
@@ -50,7 +50,7 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa
-            all_products = products.filter(queries)
+            products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -59,6 +59,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'all_products': all_products,
     }
 
     return render(request, 'products/products.html', context)
