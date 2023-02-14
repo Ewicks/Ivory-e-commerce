@@ -1,0 +1,148 @@
+<script>
+    /* jshint esversion: 11, jquery: true */
+ 
+    /* Prevent user from entering invalid data in the quantity button using their keyboard */
+    $(".qty_input").keypress(function (evt) {
+             evt.preventDefault();
+         });
+ 
+     // Disable +/- buttons outside 1-99 range
+     function handleEnableDisable(itemId, size ) {
+         if (size) {
+             var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
+         } else {
+             var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+         }
+ 
+         var minusDisabled = currentValue < 2;
+         // Disable plus button when the selected size has run out of stock
+         $(document).ready( function() {
+             var stock_size = $('select option:selected').val();
+             if (stock_size == 'xs') {
+                 stock_val = "{{ product.xs_stock }}";
+             } else if (stock_size == 's') {
+                 stock_val = "{{ product.s_stock }}";
+             } else if (stock_size == 'm') {
+                 stock_val = "{{ product.m_stock }}";
+             } else if (stock_size == 'l') { 
+                 stock_val = "{{ product.l_stock }}";
+             } else {
+                 stock_val = "{{ product.xl_stock }}";
+             }
+ 
+         if (!stock_size) {
+             $('.increment-qty').click(function() {
+             
+                 size = $(this).data('size')
+                 itemId = $(this).data('item_id');
+                 console.log(size)
+                 console.log(itemId)
+ 
+                 if (size == 'xs') {
+                     stock_val = "{{ product.xs_stock }}";
+                 } else if (size == 's') {
+                     stock_val = "{{ product.s_stock }}";
+                 } else if (size == 'm') {
+                     stock_val = "{{ product.m_stock }}";
+                 } else if (size == 'l') {
+                     stock_val = "{{ product.l_stock }}";
+                 } else {
+                     stock_val = "{{ product.xl_stock }}";
+                 }
+                 // console.log(currentValue)
+                 
+                 if (currentValue >= stock_val) {
+                     $(`.increment-size_${itemId}_${size}`).prop('disabled', true);
+                 }
+             });
+         } 
+ 
+ 
+             var plusDisabledStock = currentValue >= stock_val;
+             if (stock_size) {
+                 if (size) {
+                 $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabledStock);
+                 } else {
+                     $(`.increment-qty_${itemId}`).prop('disabled', plusDisabledStock);
+                 }     
+             }
+                   
+         });
+ 
+         if (size) {
+             $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
+         } else {
+             $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+         }
+     }
+ 
+     // Ensure proper enabling/disabling of all inputs on page load
+     var allQtyInputs = $('.qty_input');
+     for(var i = 0; i < allQtyInputs.length; i++){
+         var itemId = $(allQtyInputs[i]).data('item_id');
+         var size = $(allQtyInputs[i]).data('size');
+         handleEnableDisable(itemId, size);
+     }
+ 
+     // Check enable/disable every time the input is changed
+     $('.qty_input').change(function() {
+         var itemId = $(this).data('item_id');
+         // console.log(itemId)
+         var size = $(this).data('size');
+         handleEnableDisable(itemId, size);
+     });
+ 
+     // Check enable/disable when page is loaded
+     // $(document).ready( function () {
+     //     $('.qty_input').val()
+     //     var itemId = $(this).data('item_id');
+     //     var size = $(this).data('size');
+     //     handleEnableDisable(itemId, size);
+         
+     // })
+ 
+     $(document).ready( function () {
+         $('.qty_input').each(function(idx, elem) {
+             // console.log(elem)
+             var itemId = elem.dataset.item_id
+             // console.log(itemId)
+             var size = elem.dataset.size
+             // console.log(size)
+             handleEnableDisable(itemId, size);
+         })
+     })
+ 
+     // Increment quantity
+     $('.increment-qty').click(function(e) {
+        e.preventDefault();
+        var itemId = $(this).data('item_id');
+        var size = $(this).data('size');
+        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        if (size) {
+           var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
+        } else {
+           var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+        }
+        var currentValue = parseInt($(closestInput).val());
+        $(allQuantityInputs).val(currentValue + 1);
+        handleEnableDisable(itemId, size);
+     });
+ 
+     // Decrement quantity
+     $('.decrement-qty').click(function(e) {
+        e.preventDefault();
+        var itemId = $(this).data('item_id');
+        var size = $(this).data('size');
+        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        if (size) {
+           var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
+        } else {
+           var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+        }
+        var currentValue = parseInt($(closestInput).val());
+        $(allQuantityInputs).val(currentValue - 1);
+        handleEnableDisable(itemId, size);
+     });
+ 
+ </script>
+ 
