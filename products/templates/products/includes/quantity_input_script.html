@@ -24,13 +24,11 @@
                 stock_val = "{{ product.s_stock }}";
             } else if (stock_size == 'm') {
                 stock_val = "{{ product.m_stock }}";
-            } else if (stock_size == 'l') {
+            } else if (stock_size == 'l') { 
                 stock_val = "{{ product.l_stock }}";
             } else {
                 stock_val = "{{ product.xl_stock }}";
             }
-            // console.log(currentValue)
-
 
         if (!stock_size) {
             $('.increment-qty').click(function() {
@@ -49,15 +47,10 @@
                 } else {
                     stock_val = "{{ product.xl_stock }}";
                 }
-                // var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
-                // var plusDisabledStocktest = currentValue >= stock_val;
-                console.log(currentValue)
+                // console.log(currentValue)
                 
                 if (currentValue >= stock_val) {
-                    // console.log('hii')
-                    // console.log(currentValue)
-                    // console.log(stock_val)
-                    // var plusDisabledStockTest = currentValue >= stock_val;
+                
 
                     $(`.increment-size_${itemId}_${size}`).prop('disabled', true);
                 }
@@ -94,21 +87,18 @@
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
-        console.log(this)
         var size = $(this).data('size');
-        console.log(size)
         handleEnableDisable(itemId, size);
     });
 
     // Check enable/disable when page is loaded
     $(document).ready( function () {
-        $('.qty_input').val()(function() {
-            console.log('.qty_input')
+        $('.qty_input').val()
         var itemId = $(this).data('item_id');
         console.log(itemId)
         var size = $(this).data('size');
         handleEnableDisable(itemId, size);
-        })
+        
     })
 
     // Increment quantity

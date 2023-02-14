@@ -714,13 +714,13 @@ label[data-state="close"] input {
         z-index: 1030;
     }
 
-    .contact-img-col {
+    /* .contact-img-col {
         display: none;
-    }
+    } */
 
-    .contact-img {
+    /* .contact-img {
         display: none;
-    }
+    } */
 
     .nav-link {
         padding: 0.1rem;
