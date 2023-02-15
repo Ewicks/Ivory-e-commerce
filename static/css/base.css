@@ -613,31 +613,6 @@ label[data-state="close"] input {
     
 }
 
-
-/* Mailchimp */
-
-#mc_embed_signup {
-    background: #f4dec5;
-    clear: left;
-    width: 100%;
-    font-weight: 600;
-}
-
-.footer-img-size {
-    width: 100%;
-    height: 100%;
-}
-
-#mc_embed_signup .button{
-    color: black !important;
-    background-color: #fff !important;
-}
-#mc_embed_signup .button:hover {
-    color: #fff !important;
-    background-color: black !important;
-}
-
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -701,9 +676,7 @@ label[data-state="close"] input {
       color: #17a2b8; /* text-info */
   }
 
-  
 
-  /* pad the top a bit when navbar is collapsed on mobile */
   @media (max-width: 991px) {
     /* fixed top navbar only on medium and up */
     .fixed-top-desktop-only {
@@ -713,14 +686,6 @@ label[data-state="close"] input {
         left: 0;
         z-index: 1030;
     }
-
-    /* .contact-img-col {
-        display: none;
-    } */
-
-    /* .contact-img {
-        display: none;
-    } */
 
     .nav-link {
         padding: 0.1rem;
@@ -784,7 +749,11 @@ label[data-state="close"] input {
     }
   }
 
-
+  @media (max-width: 767px) {
+    .contact-img-col {
+        display: none;
+    }
+  }
 
 @media (max-width: 550px) {
     .nav-link {
