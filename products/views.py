@@ -20,7 +20,7 @@ def all_products(request):
 
     p = Paginator(products, 8)
     page = request.GET.get('page')
-    all_products = p.get_page(page)
+    products = p.get_page(page)
 
     if request.GET:
         if 'sort' in request.GET:

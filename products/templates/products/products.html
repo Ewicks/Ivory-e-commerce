@@ -102,7 +102,7 @@
 
 {% if products %}
 <p class="text-center">
-    Page {{ all_products.number }} of {{ all_products.paginator.num_pages }}
+    Page {{ products.number }} of {{ products.paginator.num_pages }}
 </p>
 {% else %}
 <br>
@@ -111,18 +111,18 @@
 
 <div class="d-flex justify-content-center">
     <ul style="margin-left: 10px;" class="pagination ">
-        {% if all_products.has_previous %}
+        {% if products.has_previous %}
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black" href="?page=1">&laquo;
                 first</a></li>
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black"
-                href="?page={{ all_products.previous_page_number }}">previous</a></li>
+                href="?page={{ products.previous_page_number }}">previous</a></li>
         {% endif %}
 
-        {% if all_products.has_next %}
+        {% if products.has_next %}
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black align-items-center"
-                href="?page={{ all_products.next_page_number }}">next page</a></li>
+                href="?page={{ products.next_page_number }}">next page</a></li>
         <li class="px-2"><a class="p-2 bd-highlight btn border-dark btn-clear text-black"
-                href="?page={{ all_products.paginator.num_pages }}">last page</a></li>
+                href="?page={{ products.paginator.num_pages }}">last page</a></li>
         {% endif %}
     </ul>
 </div>
