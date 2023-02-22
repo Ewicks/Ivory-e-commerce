@@ -91,7 +91,7 @@
             <p id="in-stock" class="text-success fw-bold px-2 my-2">in stock</p>
             <!-- <p id="in-stock" class=" fw-bold px-2 my-2"></p> -->
             {% elif product.xs_stock > 0 %}
-                <p id="" class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.xs_stock }}</strong></p>
+                <p class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.xs_stock }}</strong></p>
             {% elif product.s_stock > 0 %}
                 <p class="text-warning fw-bold px-2 my-2">Few In Stock: <strong>{{ product.s_stock }}</strong></p>
             {% elif product.m_stock > 0 %}

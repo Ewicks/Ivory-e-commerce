@@ -16,30 +16,28 @@
 
         var minusDisabled = currentValue < 2;
         // Disable plus button when the selected size has run out of stock
-        $(document).ready( function() {
-            var stock_size = $('select option:selected').val();
-            if (stock_size == 'xs') {
-                stock_val = "{{ product.xs_stock }}";
-            } else if (stock_size == 's') {
-                stock_val = "{{ product.s_stock }}";
-            } else if (stock_size == 'm') {
-                stock_val = "{{ product.m_stock }}";
-            } else if (stock_size == 'l') { 
-                stock_val = "{{ product.l_stock }}";
-            } else {
-                stock_val = "{{ product.xl_stock }}";
-            }
+        var stock_size = $('select option:selected').val();
+        if (stock_size == 'xs') {
+            stock_val = "{{ product.xs_stock }}";
+        } else if (stock_size == 's') {
+            stock_val = "{{ product.s_stock }}";
+        } else if (stock_size == 'm') {
+            stock_val = "{{ product.m_stock }}";
+        } else if (stock_size == 'l') { 
+            stock_val = "{{ product.l_stock }}";
+        } else {
+            stock_val = "{{ product.xl_stock }}";
+        }
 
-            var plusDisabledStock = currentValue >= stock_val;
-            if (stock_size) {
-                if (size) {
-                $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabledStock);
-                } else {
-                    $(`.increment-qty_${itemId}`).prop('disabled', plusDisabledStock);
-                }     
-            }
-                  
-        });
+        var plusDisabledStock = currentValue >= stock_val;
+        if (stock_size) {
+            if (size) {
+            $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabledStock);
+            } else {
+                $(`.increment-qty_${itemId}`).prop('disabled', plusDisabledStock);
+            }     
+        }
+                
 
         if (size) {
             $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);

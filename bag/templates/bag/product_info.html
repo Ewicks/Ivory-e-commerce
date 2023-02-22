@@ -3,3 +3,9 @@
     </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
 </p>
 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+<p class="xs_stock">{{ item.product.xs_stock }}</p>
+<p class="s_stock">{{ item.product.s_stock }}</p>
+<p>{{ s_stock }}</p>
+<p>{{ m_stock }}</p>
+<p>{{ l_stock }}</p>
+<p>{{ xl_stock }}</p>
