@@ -45,7 +45,7 @@
 
     <title>Ivory {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+<body>
     <!-- Pre Loader -->
     <aside id="preloader">
         <figure id="loader">
@@ -54,7 +54,6 @@
     </aside>
     <header>
       {% include 'includes/header.html' %}
-
     </header>
     
     {% if messages %}
@@ -77,8 +76,6 @@
     
     <div class="page-container">
         {% block content %}
-
-        
         {% endblock %}   
     </div>
 
