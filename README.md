@@ -287,6 +287,12 @@ Further links for future implementation:
 - [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
 - [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
 
+### Facebook Page
+
+I created a facebook page which is public so everyone can view it, this was created to attract more customers and drive more traffic to our website.
+
+![screenshot](docs/images/facebook-page.png)
+
 ### Newsletter Marketing
 
 I have incorporate a newsletter sign-up form on my application, to allow users to supply their
