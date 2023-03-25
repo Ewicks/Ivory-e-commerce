@@ -161,11 +161,14 @@
         </div>
     </div>
 </div>
-    
+
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+
+{% include 'products/includes/quantity_input_script.html' %}
+
 <script>
     $(document).ready( function() {
         console.log("in script ...")
@@ -207,5 +210,6 @@
 
 </script>
 
-{% include 'products/includes/quantity_input_script.html' %}
+
+
 {% endblock %}
