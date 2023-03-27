@@ -16,27 +16,31 @@
 
         var minusDisabled = currentValue < 2;
      
-        console.log(size)
         var stock_val
-        console.log(stock_val)
         if (size == 'xs') {
             stock_val = "{{ item.xs_stock }}";
-            console.log(stock_val)
         } else if (size == 's') {
             stock_val = "{{ product.s_stock }}";
         } else if (size == 'm') {
             stock_val = "{{ product.m_stock }}";
         } else if (size == 'l') {
             stock_val = "{{ product.l_stock }}";
-        } else {
+        } else if (size == 'xl') {
             stock_val = "{{ product.xl_stock }}";
+        } else {
+            stock_val = 1;
         }
-        console.log(currentValue)
       
         if (currentValue >= stock_val) {
             $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
         } else {
             $(`.increment-size_${itemId}_${size}`).removeAttr("disabled");
+        }
+        
+        if (size) {
+            $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
+        } else {
+            $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         }
     }
 

@@ -17,6 +17,7 @@
         var minusDisabled = currentValue < 2;
         // Disable plus button when the selected size has run out of stock
         var stock_size = $('select option:selected').val();
+        
         if (stock_size == 'xs') {
             stock_val = "{{ product.xs_stock }}";
         } else if (stock_size == 's') {
@@ -25,9 +26,12 @@
             stock_val = "{{ product.m_stock }}";
         } else if (stock_size == 'l') { 
             stock_val = "{{ product.l_stock }}";
-        } else {
+        } else if (stock_size == 'xl') {
             stock_val = "{{ product.xl_stock }}";
+        } else {
+            stock_val = 1;
         }
+
 
         var plusDisabledStock = currentValue >= stock_val;
         if (stock_size) {
@@ -56,7 +60,6 @@
 
     // Increment quantity
     $('.increment-qty').click(function(e) {
-        console.log("Working")
        e.preventDefault();
        var itemId = $(this).data('item_id');
        var size = $(this).data('size');
