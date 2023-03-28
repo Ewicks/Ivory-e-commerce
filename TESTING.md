@@ -145,24 +145,20 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Link | Screenshot |
 | --- | --- | --- |
-| As a new site user, I would like to access the site on differing devices, so that I can interact with content on my preferred device. | [link](https://github.com/Ewicks/Ivory/issues/1) | ![Screenshot](docs/images/userstory-1.png) |
-| As a new site user, I would like to press the back button if I get a 404 error page, so that I can easily go back to the website. | [link](https://github.com/Ewicks/Ivory/issues/3) | ![Screenshot](docs/images/userstory-3.png) |
-| As a new site user, I would like to view my recent orders, so that I can quickly check all the items that was ordered were the correct ones. | [link](https://github.com/Ewicks/Ivory/issues/5) | ![Screenshot](docs/images/userstory-5.png) |
-| As a returning site user, I would like to be able to register for a newsletter. | [link](https://github.com/Ewicks/Ivory/issues/11) | ![Screenshot](docs/images/userstory-11.png) |
-| As a returning site user, I would like to view the product up close, so that I can make an informed decision to purchase. | [link](https://github.com/Ewicks/Ivory/issues/13) | ![Screenshot](docs/images/user-story-13.png) |
-| As a returning site user, I would like to search for products by entering descriptive words, so that I can find what I want quickly. | [link](https://github.com/Ewicks/Ivory/issues/12) | ![Screenshot](docs/images/userstory-12.png) |
-| As a returning site user, I should be able to update my card details on my account and also view the saved card details. | [link](https://github.com/Ewicks/Ivory/issues/9) | ![Screenshot](docs/images/user-story-9.png) |
-| As a returning site user, I should be able to be able to view all items that will be purchased before I proceed to checkout. | [link](https://github.com/Ewicks/Ivory/issues/10) | ![Screenshot](docs/images/user-story-10.png) |
-| As a Site User I want to be able to register an account. | [link](https://github.com/Ewicks/Ivory/issues/8) | ![Screenshot](docs/images/userstory-8.png) |
-| As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access | [link](https://github.com/Ewicks/Ivory/issues/4) | ![Screenshot](docs/images/userstory-4.png) |
-| As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have.. | [link](https://github.com/Ewicks/Ivory/issues/7) | ![Screenshot](docs/images/userstory-7.png) |
-|  As a Superuser I can edit, delete and add reviews on the front end so that it is quicker to update the reviews section  | [link](https://github.com/Ewicks/Ivory/issues/14) | ![Screenshot](docs/images/userstory-14.png) |
-|  As a site user I can send a message to the store so that I can get answers to any questions | [link](https://github.com/Ewicks/Ivory/issues/15) | ![Screenshot](docs/images/userstory-15.png) |
-|  As a Superuser I can edit how many items are in stock so that the store does not sell more items than we have in stock | [link](https://github.com/Ewicks/Ivory/issues/16) | ![Screenshot](docs/images/userstory-16.png) |
-|  As a site user I can add a product to a wish list so that I can go back to the item quickly in the future  | [link](https://github.com/Ewicks/Ivory/issues/17) | ![Screenshot](docs/images/userstory-17.png) |
-|  As a site user I can see dimensions of all clothing on each product so that I know what size to buy | [link](https://github.com/Ewicks/Ivory/issues/18) | ![Screenshot](docs/images/userstory-18.png) |
-| As a site user I can view each product from different angles so that I know what each product looks like from the back side and front | [link](https://github.com/Ewicks/Ivory/issues/19) | ![Screenshot](docs/images/userstory-19.png) |
-
+| As a new site user, I would like to access the site on differing devices, so that I can interact with content on my preferred device. | [link](https://github.com/Ewicks/Ivory/issues/1) | ![Screenshot](docs/images/mobile-checkout.png) ![Screenshot](docs/images/safari-product.png) |
+| As a new site user, I would like to press the back button if I get a 404 error page, so that I can easily go back to the website. | [link](https://github.com/Ewicks/Ivory/issues/3) | ![Screenshot](docs/images/404-btn.png) |
+| As a new site user, I would like to view my recent orders, so that I can quickly check all the items that was ordered were the correct ones. | [link](https://github.com/Ewicks/Ivory/issues/5) | ![Screenshot](docs/images/order-history.png) |
+| As a returning site user, I would like to be able to register for a newsletter. | [link](https://github.com/Ewicks/Ivory/issues/11) | ![Screenshot](docs/images/newsletter-register.png) |
+| As a returning site user, I would like to view the product up close, so that I can make an informed decision to purchase. | [link](https://github.com/Ewicks/Ivory/issues/13) | ![Screenshot](docs/images/product.png) |
+| As a returning site user, I would like to search for products by entering descriptive words, so that I can find what I want quickly. | [link](https://github.com/Ewicks/Ivory/issues/12) | ![Screenshot](docs/images/search-bar.png) |
+| As a returning site user, I should be able to update my card details on my account and also view the saved card details. | [link](https://github.com/Ewicks/Ivory/issues/9) | ![Screenshot](docs/images/card-details-bar.png) |
+| As a returning site user, I should be able to be able to view all items that will be purchased before I proceed to checkout. | [link](https://github.com/Ewicks/Ivory/issues/10) | ![Screenshot](docs/images/bag-items.png) |
+| As a Site User I want to be able to register an account. | [link](https://github.com/Ewicks/Ivory/issues/8) | ![Screenshot](docs/images/register-account.png) |
+| As a Superuser I can delete, edit or add posts to the website. All other user's do not have this access | [link](https://github.com/Ewicks/Ivory/issues/4) | ![Screenshot](docs/images/superuser-account.png) |
+| As a Administrator I can view the messages that a user has sent via the contact us form so that I can get back to them answering queries they may have.. | [link](https://github.com/Ewicks/Ivory/issues/7) | ![Screenshot](docs/images/contact-msg.png) |
+|  As a Superuser I can delete and add reviews on the front end so that it is quicker to update the reviews section  | [link](https://github.com/Ewicks/Ivory/issues/14) | ![Screenshot](docs/images/delete-review.png) |
+|  As a site user I can send a message to the store so that I can get answers to any questions | [link](https://github.com/Ewicks/Ivory/issues/15) | ![Screenshot](docs/images/contact.png) |
+|  As a Superuser I can edit how many items are in stock so that the store does not sell more items than we have in stock | [link](https://github.com/Ewicks/Ivory/issues/16) | ![Screenshot](docs/images/stock-levels.png) |
 
 ## Bugs
 
